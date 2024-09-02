@@ -57,6 +57,16 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: Almarai
+      fonts:
+        - asset: assets/fonst/Almarai/Almarai-Regular.ttf
+        - asset: assets/fonst/Almarai/Almarai-Bold.ttf
+          weight: 700
+        - asset: assets/fonst/Almarai/Almarai-Italic.ttf
+          style: italic
 
   # To add assets to your application, add an assets section, like this:
   # assets:
