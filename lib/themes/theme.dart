@@ -39,6 +39,11 @@ ThemeData lightTheme = ThemeData(
       fontWeight: FontWeight.w400,
       color: LightColors.instance.kBlackColor,
     ),
+    headlineMedium: GoogleFonts.almarai(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: LightColors.instance.kPrimaryColor,
+    ),
     headlineSmall: GoogleFonts.almarai(
       fontSize: 14,
       fontWeight: FontWeight.w400,
