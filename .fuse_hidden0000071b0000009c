@@ -38,9 +38,6 @@ dependencies:
   google_fonts: ^6.2.1
   path_provider: ^2.1.4
   iconsax_plus: ^1.0.0
-  flutter_svg: ^2.0.10+1
-  iconsax: ^0.0.8
-  dropdown_button2: ^2.3.9
 
 dev_dependencies:
   flutter_test:
@@ -65,8 +62,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/icons/Hicon/Outline/
-    - assets/icons/vuesax/outline/
   fonts:
     - family: AlNile
       fonts:

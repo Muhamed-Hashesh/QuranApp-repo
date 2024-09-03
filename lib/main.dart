@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran/themes/theme.dart';
 import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
+import 'package:quran/views/azhar_screen/azkar_page.dart';
 
 import 'views/onBoarding.dart';
 
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: lightTheme,
       // home: const OnBoarding(),
-      home: const AlAd3yaScreen(),
+      // home: const AlAd3yaScreen(),
+      home: const AzkarPage(),
     );
   }
 }
