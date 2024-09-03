@@ -41,7 +41,7 @@ class OnBoarding extends StatelessWidget {
                       ),
                 ),
                 const SizedBox(height: 20),
-                const OutlinedButton_Start(),
+                const OutlinedButtonStart(),
               ],
             ),
           ),
