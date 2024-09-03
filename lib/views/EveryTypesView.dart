@@ -10,9 +10,7 @@ class Everytypesview extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: Customappbar(),
-        drawer: Drawer(
-            // Drawer content
-            ),
+        drawer: Drawer(),
       ),
     );
   }
