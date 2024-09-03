@@ -14,6 +14,7 @@ ThemeData lightTheme = ThemeData(
     primaryContainer: LightColors.instance.kSecondaryColor,
     onPrimaryContainer: LightColors.instance.kPrimaryColor,
     surface: LightColors.instance.kBackgroundColor,
+    onSurface: LightColors.instance.kBlackColor,
   ),
   textTheme: GoogleFonts.poppinsTextTheme(
     ThemeData.light().textTheme,
@@ -76,5 +77,9 @@ ThemeData lightTheme = ThemeData(
     elevation: 0.0,
     backgroundColor: LightColors.instance.kBackgroundColor,
     foregroundColor: LightColors.instance.kPrimaryColor,
+  ),
+  cardTheme: CardTheme(
+    margin: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
+    color: LightColors.instance.kAyahTodayCardColor,
   ),
 );
