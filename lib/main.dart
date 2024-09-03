@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quran/themes/theme.dart';
 import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
 
+import 'views/EveryTypesView.dart';
 import 'views/onBoarding.dart';
 
 void main() {
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightTheme,
-      // home: const OnBoarding(),
-      home: const AlAd3yaScreen(),
+      home: Everytypesview(),
+      // home: const AlAd3yaScreen(),
     );
   }
 }

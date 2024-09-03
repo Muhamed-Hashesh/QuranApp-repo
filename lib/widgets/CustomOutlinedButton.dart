@@ -13,7 +13,7 @@ class OutlinedButtonStart extends StatelessWidget {
       child: OutlinedButton(
         onPressed: () {
           Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => const Everytypesview()));
+              MaterialPageRoute(builder: (context) => Everytypesview()));
         },
         style: OutlinedButton.styleFrom(
           side: BorderSide(

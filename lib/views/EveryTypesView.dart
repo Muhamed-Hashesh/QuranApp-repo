@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/widgets/CustomAppBar.dart';
-import 'package:quran/widgets/DailyColumnWidget.dart';
-import '../widgets/PrayerTimeCard .dart';
-import '../widgets/TabBarWidget.dart';
+import 'package:quran/widgets/EveryTypesWidgets/DailyColumnWidget.dart';
+import '../widgets/EveryTypesWidgets/PrayerTimeCard .dart';
+import '../widgets/EveryTypesWidgets/TabBarWidget.dart';
 
 class Everytypesview extends StatelessWidget {
   const Everytypesview({super.key});
@@ -11,12 +12,11 @@ class Everytypesview extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Directionality(
       textDirection: TextDirection.rtl,
-      child: DefaultTabController(
-        length: 3,
-        child: Scaffold(
-            appBar: Customappbar(),
-            drawer: Drawer(),
-            body: Column(
+      child: Scaffold(
+          appBar: Customappbar(),
+          drawer: Drawer(),
+          body: SingleChildScrollView(
+            child: Column(
               children: [
                 PrayerTimeCard(
                   imageUrl: 'assets/images/open_book.jpg',
@@ -29,23 +29,11 @@ class Everytypesview extends StatelessWidget {
                   numJaz: 1,
                   numAyah: 1,
                 ),
-                TabBar(
-                  tabs: [
-                    Tab(
-                      text: "الصفحة الرئيسية",
-                    ),
-                    Tab(
-                      text: "الصفحة 2",
-                    ),
-                    Tab(
-                      text: "الصفحة 3",
-                    )
-                  ],
-                ),
-                TabBarWidget()
+                SizedBox(height: 10),
+                QuranAppTabBarGrid()
               ],
-            )),
-      ),
+            ),
+          )),
     );
   }
 }
