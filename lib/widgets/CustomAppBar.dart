@@ -13,7 +13,8 @@ class Customappbar extends StatelessWidget implements PreferredSizeWidget {
       leading: IconButton(
         icon: Icon(
           IconsaxPlusLinear.menu_1,
-          color: LightColors.instance.kPrimaryColor,
+          color: Theme.of(context).colorScheme.primary,
+          size: 30,
         ),
         onPressed: () {
           Scaffold.of(context).openDrawer();
@@ -22,7 +23,7 @@ class Customappbar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         'القرآن الكريم',
         style: TextStyle(
-          color: LightColors.instance.kPrimaryColor,
+          color: Theme.of(context).colorScheme.primary,
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
@@ -31,7 +32,7 @@ class Customappbar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: Icon(
             IconsaxPlusLinear.search_normal_1,
-            color: LightColors.instance.kPrimaryColor,
+            color: Theme.of(context).colorScheme.primary,
             size: 24,
           ),
           onPressed: () {},

@@ -27,7 +27,7 @@ class TimeNextpray extends StatelessWidget {
                   'الظهر',
                   style: TextStyle(
                     fontSize: 16,
-                    color: LightColors.instance.kPrimaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 Text(
@@ -35,21 +35,21 @@ class TimeNextpray extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
-                    color: LightColors.instance.kPrimaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 Text(
                   'الصلاة التالية: العصر',
                   style: TextStyle(
                     fontSize: 14,
-                    color: LightColors.instance.kPrimaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 Text(
                   '2:50 مساءً',
                   style: TextStyle(
                     fontSize: 14,
-                    color: LightColors.instance.kPrimaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ],
