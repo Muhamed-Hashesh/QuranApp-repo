@@ -16,7 +16,7 @@ ThemeData lightTheme = ThemeData(
     surface: LightColors.instance.kBackgroundColor,
     onSurface: LightColors.instance.kBlackColor,
   ),
-  textTheme: GoogleFonts.poppinsTextTheme(
+  textTheme: GoogleFonts.almaraiTextTheme(
     ThemeData.light().textTheme,
   ).copyWith(
     /// onBoarding only
@@ -30,19 +30,19 @@ ThemeData lightTheme = ThemeData(
     titleMedium: GoogleFonts.almarai(
       fontSize: 20,
       fontWeight: FontWeight.w700,
-      color: LightColors.instance.kBlackColor,
+      color: LightColors.instance.kPrimaryColor,
     ),
 
     /// sections up Titles
     titleSmall: GoogleFonts.almarai(
-      fontSize: 16,
+      fontSize: 18,
       fontWeight: FontWeight.w400,
       color: LightColors.instance.kBlackColor,
     ),
     headlineSmall: GoogleFonts.almarai(
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: FontWeight.w400,
-      color: LightColors.instance.kBlackColor,
+      color: LightColors.instance.kPrimaryColor,
     ),
 
     /// req'a font
