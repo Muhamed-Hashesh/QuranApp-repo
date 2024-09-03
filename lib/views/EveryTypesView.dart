@@ -15,7 +15,9 @@ class Everytypesview extends StatelessWidget {
           drawer: Drawer(),
           body: Column(
             children: [
-              PrayerTimeCard(),
+              PrayerTimeCard(
+                imageUrl: 'assets/images/open_book.jpg',
+              ),
               DailyColumnWidget(
                 arabicText: 'الحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
                 englishText:

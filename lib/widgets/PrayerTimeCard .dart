@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'Time_NextPray.dart';
 
 class PrayerTimeCard extends StatelessWidget {
-  const PrayerTimeCard({super.key});
+  const PrayerTimeCard({super.key, required this.imageUrl});
 
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +24,7 @@ class PrayerTimeCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.asset(
-              'assets/images/open_book.jpg',
+              imageUrl,
               width: double.infinity,
               height: 150,
               fit: BoxFit.cover,
