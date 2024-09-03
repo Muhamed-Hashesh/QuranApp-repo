@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quran/themes/colors.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
 class Customappbar extends StatelessWidget implements PreferredSizeWidget {

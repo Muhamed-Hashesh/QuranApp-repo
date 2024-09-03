@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../themes/colors.dart';
-
 class TimeNextpray extends StatelessWidget {
   const TimeNextpray({
     super.key,
