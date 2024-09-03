@@ -39,7 +39,7 @@ class OnBoarding extends StatelessWidget {
                             LightColors.instance.kBlackColor.withOpacity(0.5),
                       ),
                 ),
-                const SizedBox(height: 20),
+                20.height,
                 const OutlinedButtonStart(),
               ],
             ),
