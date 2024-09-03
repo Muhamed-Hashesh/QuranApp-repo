@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/widgets/CustomAppBar.dart';
 import 'package:quran/widgets/EveryTypesWidgets/DailyColumnWidget.dart';
 import '../widgets/EveryTypesWidgets/PrayerTimeCard .dart';
