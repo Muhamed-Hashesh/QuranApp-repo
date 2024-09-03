@@ -26,7 +26,7 @@ class OutlinedButton_Start extends StatelessWidget {
           child: const Text(
             'ابدأ الآن',
             style: TextStyle(
-              fontFamily: 'Almarai',
+              // fontFamily: 'Almarai',
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 0, 0, 0),

@@ -26,7 +26,7 @@ class OnBoarding extends StatelessWidget {
                   'تطبيق العبادات',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: 'Almarai',
+                    fontFamily: 'AlNile',
                     fontSize: 32,
                     fontWeight: FontWeight.w700,
                     color: Colors.black,
@@ -41,10 +41,10 @@ class OnBoarding extends StatelessWidget {
               '''تعلم الدين الاسلامي عن طريق تصنيفات وملفات وشروحات ومحاضرات ٫٫الخ , يوفر أوقات الصلاة وخطب والقرآن الكريم كامل مع توفير تفسير وقراءة بالصوت ٫٫ اكتشف المزيد بنفسك''',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: 'Almarai',
-                fontSize: 22,
-                color: Color.fromARGB(240, 0, 0, 0),
-              ),
+                  // fontFamily: 'Almarai',
+                  // fontSize: 22,
+                  // color: Color.fromARGB(240, 0, 0, 0),
+                  ),
             ),
           ),
           const SizedBox(height: 20),

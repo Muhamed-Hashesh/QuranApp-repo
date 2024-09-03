@@ -35,6 +35,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  path_provider: ^2.1.4
 
 dev_dependencies:
   flutter_test:
@@ -58,13 +60,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/
+    - assets/images/
   fonts:
-    - family: Almarai
+    - family: AlNile
       fonts:
-        - asset: assets/fonst/Almarai/Almarai-Regular.ttf
-        - asset: assets/fonst/Almarai/Almarai-Bold.ttf
-          weight: 700
+        - asset: assets/fonts/Al Nile.ttc
+          weight: 400 # Regular weight
+        - asset: assets/fonts/Al Nile.ttc
+          weight: 700 # Bold weight
 
   # To add assets to your application, add an assets section, like this:
   # assets:
