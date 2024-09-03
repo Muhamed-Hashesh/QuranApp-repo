@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/widgets/paje_container.dart';
+import 'package:quran/views/azhar_screen/widgets/animated_drop.dart';
 
 class AzkarPageContent extends StatefulWidget {
   const AzkarPageContent({super.key});
@@ -52,26 +51,7 @@ class _AzkarPageContentState extends State<AzkarPageContent>
             ),
           ),
         ),
-        AnimatedSize(
-          alignment: Alignment.center,
-          duration: const Duration(milliseconds: 600),
-          curve: Curves.easeInOut,
-          reverseDuration: const Duration(milliseconds: 600),
-          child: isPressed
-              ? Column(
-                  children: [
-                    8.height,
-                    ListView.separated(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemBuilder: (context, index) => const PajeContainer(),
-                      separatorBuilder: (context, index) => 20.height,
-                      itemCount: 3,
-                    ),
-                  ],
-                )
-              : const SizedBox(),
-        ),
+        AnimatedDrop(isPressed: isPressed),
       ],
     );
   }
