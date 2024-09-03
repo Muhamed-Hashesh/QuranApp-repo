@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
-AppBar InPagesAppBar(BuildContext context,
-    {required GlobalKey<ScaffoldState> scaffoldKey,
-    required String title,
-    bool searchBar = false}) {
+AppBar InPagesAppBar(
+  BuildContext context, {
+  required GlobalKey<ScaffoldState> scaffoldKey,
+  required String title,
+  bool searchBar = false,
+  bool centerTitle = true,
+}) {
   return AppBar(
+    centerTitle: centerTitle,
     title: Text(
       title,
       style: Theme.of(context).textTheme.titleMedium,
@@ -23,7 +28,7 @@ AppBar InPagesAppBar(BuildContext context,
         onPressed: () {},
         icon: searchBar
             ? const Icon(Iconsax.search_normal_1)
-            : const Icon(Iconsax.arrow_left2),
+            : const Icon(IconsaxPlusLinear.arrow_left_1),
       ),
     ],
   );
