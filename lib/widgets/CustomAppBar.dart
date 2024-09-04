@@ -1,40 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
 class Customappbar extends StatelessWidget implements PreferredSizeWidget {
-  const Customappbar({super.key});
+  const Customappbar(
+      {super.key,
+      required this.title,
+      this.searchBar = false,
+      this.centerTitle = true});
+  final String title;
+  final bool searchBar;
+  final bool centerTitle;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: 0,
-      backgroundColor: Colors.white,
-      leading: IconButton(
-        icon: Icon(
-          IconsaxPlusLinear.menu_1,
-          color: Theme.of(context).colorScheme.primary,
-          size: 30,
-        ),
-        onPressed: () {
-          Scaffold.of(context).openDrawer();
-        },
-      ),
+      forceMaterialTransparency: true,
+      centerTitle: centerTitle,
       title: Text(
-        'القرآن الكريم',
-        style: TextStyle(
+        title,
+        style: Theme.of(context).textTheme.titleMedium,
+      ),
+      leading: IconButton(
+        onPressed: () => Scaffold.of(context).openDrawer(),
+        icon: Icon(
+          Iconsax.menu,
           color: Theme.of(context).colorScheme.primary,
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
         ),
       ),
       actions: [
         IconButton(
-          icon: Icon(
-            IconsaxPlusLinear.search_normal_1,
-            color: Theme.of(context).colorScheme.primary,
-            size: 24,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           onPressed: () {},
+          icon: searchBar
+              ? const Icon(Iconsax.search_normal_1)
+              : const Icon(IconsaxPlusLinear.arrow_left_1),
         ),
       ],
     );

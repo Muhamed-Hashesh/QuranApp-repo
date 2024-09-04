@@ -13,27 +13,29 @@ class Everytypesview extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-          appBar: const Customappbar(),
-          drawer: CustomDrawer(),
-          body: const SingleChildScrollView(
-            child: Column(
-              children: [
-                PrayerTimeCard(
-                  imageUrl: 'assets/images/open_book.jpg',
-                ),
-                DailyColumnWidget(
-                  arabicText: 'الحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
-                  englishText:
-                      'All praise and thanks be to the Lord of the worlds.',
-                  surahName: "الفاتحة",
-                  numJaz: 1,
-                  numAyah: 1,
-                ),
-                SizedBox(height: 10),
-                QuranAppTabBarGrid()
-              ],
-            ),
-          )),
+        appBar: const Customappbar(
+            title: 'القرآن الكريم', centerTitle: false, searchBar: true),
+        drawer: CustomDrawer(),
+        body: const SingleChildScrollView(
+          child: Column(
+            children: [
+              PrayerTimeCard(
+                imageUrl: 'assets/images/open_book.jpg',
+              ),
+              DailyColumnWidget(
+                arabicText: 'الحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+                englishText:
+                    'All praise and thanks be to the Lord of the worlds.',
+                surahName: "الفاتحة",
+                numJaz: 1,
+                numAyah: 1,
+              ),
+              SizedBox(height: 10),
+              QuranAppTabBarGrid()
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

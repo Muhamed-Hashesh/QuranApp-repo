@@ -42,7 +42,6 @@ class Gridviewitems extends StatelessWidget {
                 Text(
                   gridItems[index]['label']!,
                   style: TextStyle(
-                      fontFamily: 'Almarai',
                       fontSize: 18,
                       color: Theme.of(context).colorScheme.primary),
                   textAlign: TextAlign.center,
