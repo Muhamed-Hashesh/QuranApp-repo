@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran/views/every_types_screen/widgets/daily_column_widget.dart';
+import 'package:quran/views/every_types_screen/widgets/grid_view_items.dart';
 import 'package:quran/views/every_types_screen/widgets/prayer_time_card.dart';
 import 'package:quran/views/every_types_screen/widgets/tab_bar_widget.dart';
 import 'package:quran/widgets/custom_appbar.dart';
@@ -92,8 +93,10 @@ class _EveryTypesViewState extends State<EveryTypesView>
                 ),
                 const SizedBox(height: 10),
                 SizedBox(
-                    height: 200, // Adjust height based on your content
-                    child: TabBarView(controller: _tabController, children: [
+                  height: 200, // Adjust height based on your content
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
                       Container(
                         width: 200,
                         height: 100,
@@ -104,12 +107,10 @@ class _EveryTypesViewState extends State<EveryTypesView>
                         height: 100,
                         color: Colors.blue,
                       ),
-                      Container(
-                        width: 200,
-                        height: 100,
-                        color: Colors.red,
-                      ),
-                    ])),
+                      Gridviewitems(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
