@@ -33,7 +33,7 @@ class OnBoarding extends StatelessWidget {
                 16.height,
                 Text(
                   '''تعلم الدين الاسلامي عن طريق تصنيفات وملفات وشروحات ومحاضرات ٫٫الخ , يوفر أوقات الصلاة وخطب والقرآن الكريم كامل مع توفير تفسير وقراءة بالصوت ٫٫ اكتشف المزيد بنفسك''',
-                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         color:
                             LightColors.instance.kBlackColor.withOpacity(0.5),
                       ),
