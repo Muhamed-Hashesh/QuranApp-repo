@@ -19,16 +19,30 @@ class DailyVerseCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ContentCardAyaToday(
-            arabicText: arabicText,
-            englishText: englishText,
-            surahName: surahName,
-            numJaz: numJaz,
-            numAyah: numAyah),
+    return Container(
+      decoration: BoxDecoration(
+        border: const Border(
+          left: BorderSide(
+            color: Color(0xffFFB57D),
+            width: 5.0,
+          ),
+        ),
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      // margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
+      child: Card(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+        margin: EdgeInsets.zero,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ContentCardAyaToday(
+              arabicText: arabicText,
+              englishText: englishText,
+              surahName: surahName,
+              numJaz: numJaz,
+              numAyah: numAyah),
+        ),
       ),
     );
   }

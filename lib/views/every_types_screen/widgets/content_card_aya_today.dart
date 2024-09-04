@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran/helpers/sized_box.dart';
+import 'package:quran/themes/colors.dart';
 
 class ContentCardAyaToday extends StatelessWidget {
   const ContentCardAyaToday({
@@ -24,44 +26,43 @@ class ContentCardAyaToday extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              arabicText,
-              style: TextStyle(
-                fontSize: 28,
-                color: Theme.of(context).colorScheme.secondary,
-                fontFamily: 'AlNile',
-              ),
-            ),
+            Text(arabicText,
+                style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                      color: LightColors.instance.kAyahTodayFontColor,
+                    )),
             IconButton(
                 onPressed: () {},
                 icon: Icon(
                   IconsaxPlusBold.heart_add,
-                  color: Theme.of(context).colorScheme.onPrimary,
-                  size: 45,
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSecondaryContainer
+                      .withOpacity(0.5),
+                  size: 28,
                 ))
           ],
         ),
         Text(
-          textDirection: TextDirection.ltr,
-          englishText,
-          style: const TextStyle(
-            fontSize: 16,
-            color: Colors.white,
-            fontFamily: 'Poppins',
-          ),
-        ),
-        5.height,
+            textDirection: TextDirection.ltr,
+            englishText,
+            style: GoogleFonts.poppins(
+              textStyle: TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).colorScheme.onSecondaryContainer,
+              ),
+            )),
+        16.height,
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
               'سورة $surahName : الجزء $numJaz - أية $numAyah',
-              style: TextStyle(
-                fontSize: 14,
-                color: Theme.of(context).colorScheme.inversePrimary,
-              ),
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  color: LightColors.instance.kAyahTodayFontColor,
+                  fontSize: 10),
             ),
           ],
         ),

@@ -38,19 +38,23 @@ class _PrayerTimeCardState extends State<PrayerTimeCard> {
   Widget build(BuildContext context) {
     return Container(
       height: 160,
-      margin: const EdgeInsets.all(16.0),
+      margin: const EdgeInsets.symmetric(
+        vertical: 16,
+      ),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          image: DecorationImage(
-              image: Image.asset(imagesList[imageIndex]).image,
-              fit: BoxFit.fill)),
+        borderRadius: BorderRadius.circular(16),
+        image: DecorationImage(
+          image: Image.asset(imagesList[imageIndex]).image,
+          fit: BoxFit.cover,
+        ),
+      ),
       child: const TimeNextpray(),
     );
   }
 
   @override
   void dispose() {
-    _timer.cancel(); // إيقاف المؤقت عند التخلص من الـ Widget
+    _timer.cancel();
     super.dispose();
   }
 }
