@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran/helpers/sized_box.dart';
 
 import 'daily_verse_card .dart';
 
@@ -20,26 +21,20 @@ class DailyColumnWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 22.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'آية اليوم',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Theme.of(context).colorScheme.onSurface),
-              ),
-              Text(
-                'سورة $surahName',
-                style: TextStyle(
-                    fontSize: 20, color: Theme.of(context).colorScheme.primary),
-              ),
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'الآيات اليومية',
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+            ),
+            Text('سورة $surahName',
+                style: Theme.of(context).textTheme.headlineSmall),
+          ],
         ),
+        8.height,
         DailyVerseCard(
           arabicText: arabicText,
           englishText: englishText,

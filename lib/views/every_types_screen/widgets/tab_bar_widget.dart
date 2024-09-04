@@ -9,17 +9,11 @@ class QuranAppTabBarGrid extends StatefulWidget {
   QuranAppTabBarGridState createState() => QuranAppTabBarGridState();
 }
 
-class QuranAppTabBarGridState extends State<QuranAppTabBarGrid>
-    with SingleTickerProviderStateMixin {
+class QuranAppTabBarGridState extends State<QuranAppTabBarGrid> {
   late TabController _tabController;
   final List<String> tabs = ['جميع التصنيفات', 'كل الوسائط', 'أوقات الصلاة'];
 
   @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(length: tabs.length, vsync: this);
-  }
-
   @override
   void dispose() {
     _tabController.dispose();
@@ -28,49 +22,67 @@ class QuranAppTabBarGridState extends State<QuranAppTabBarGrid>
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [_buildCustomTabBar(), 8.height, Gridviewitems()],
-    );
-  }
-
-  Widget _buildCustomTabBar() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 5),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: TabBar(
-          controller: _tabController,
-          indicator: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Theme.of(context).colorScheme.onPrimary,
-          ),
-          labelColor: Theme.of(context).colorScheme.secondary,
-          unselectedLabelColor: Theme.of(context).colorScheme.secondary,
-          labelPadding: const EdgeInsets.all(5),
-          tabs: tabs.map((String name) {
-            return Tab(
-              child: Container(
-                width: double.infinity,
-                alignment: Alignment.center,
-                child: Text(
-                  name,
-                  textAlign: TextAlign.center,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
+    return DefaultTabController(
+      length: tabs.length,
+      child: ListView(
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.primary,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: TabBar(
+                controller: _tabController,
+                indicatorSize: TabBarIndicatorSize.tab,
+                dividerHeight: 0,
+                indicatorPadding:
+                    const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Theme.of(context).colorScheme.onPrimary,
                 ),
-              ),
-            );
-          }).toList(),
-        ),
+                // labelColor: Theme.of(context).colorScheme.onSurface,
+                unselectedLabelColor:
+                    Theme.of(context).colorScheme.onSecondaryContainer,
+                labelPadding: const EdgeInsets.all(2),
+                tabs: [
+                  for (var i = 0; i < tabs.length; i++)
+                    Tab(
+                      child: Text(
+                        tabs[i],
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                    ),
+                ]),
+          ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                // Gridviewitems(),
+                // Gridviewitems(),
+                // Gridviewitems(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
