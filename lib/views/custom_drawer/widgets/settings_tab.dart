@@ -7,73 +7,88 @@ class SettingsTab extends StatefulWidget {
 }
 
 class _SettingsTabState extends State<SettingsTab> {
-  @override
   bool isNightModeEnabled = false;
 
+  static List<Map<String, dynamic>> settingsList = [
+    {
+      'icon': Image.asset(
+        'assets/images/Quraan.png',
+        width: 35,
+      ),
+      'label': 'القرآن الكريم',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'الأحزاب',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'التفسير',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'الأجزاء',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'السجدات',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'الركوع',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'الصفحة الرئيسية',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'تفعيل الوضع الليلي',
+      'hasSwitch': true,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'المزيد من التطبيقات',
+      'hasSwitch': false,
+    },
+    const {
+      'icon': Icon(Iconsax.icon),
+      'label': 'مشاركة التطبيق',
+      'hasSwitch': false,
+    },
+  ];
+
+  @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8.0),
-      children: [
-        ListTile(
-          title: const Text('التفسير'),
-          leading: const Icon(Iconsax.book),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('الأجزاء'),
-          leading: const Icon(Iconsax.book1),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('الأحزاب'),
-          leading: const Icon(Iconsax.book4),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('السجدات'),
-          leading: const Icon(Icons.book_outlined),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('الركوع'),
-          leading: const Icon(Icons.book),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text(
-            'تفعيل الوضع الليلي',
+    return ListView.builder(
+      padding: const EdgeInsets.only(top: 8),
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (BuildContext context, int index) => ListTile(
+          title: Text(
+            settingsList[index]['label'],
             maxLines: 1,
             softWrap: false,
           ),
-          trailing: Switch(
-            value: isNightModeEnabled,
-            onChanged: (value) {
-              setState(() {
-                isNightModeEnabled = value;
-              });
-            },
-            activeColor: Theme.of(context).colorScheme.primary,
-          ),
-          leading: const Icon(
-            Icons.nightlight_round,
-          ),
-        ),
-        ListTile(
-          title: const Text('الصفحة الرئيسية'),
-          leading: const Icon(Icons.home),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('المزيد من التطبيقات'),
-          leading: const Icon(Icons.apps),
-          onTap: () {},
-        ),
-        ListTile(
-          title: const Text('مشاركة التطبيق'),
-          leading: const Icon(Icons.share),
-          onTap: () {},
-        ),
-      ],
+          trailing: settingsList[index]['hasSwitch']
+              ? Switch(
+                  value: isNightModeEnabled,
+                  onChanged: (value) {
+                    setState(() {
+                      isNightModeEnabled = value;
+                    });
+                  },
+                  activeColor: Theme.of(context).colorScheme.primary,
+                )
+              : null,
+          leading: settingsList[index]['icon']),
+      itemCount: settingsList.length,
     );
   }
 }

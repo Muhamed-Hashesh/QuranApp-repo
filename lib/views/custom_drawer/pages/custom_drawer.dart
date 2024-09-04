@@ -11,33 +11,37 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: CustomCard(),
-          ),
-          10.height,
-          Expanded(
-            child: DefaultTabController(
-              length: 2,
-              child: Column(
-                children: [
-                  CustomTabBar(tabs: tabs),
-                  Expanded(
-                    child: TabBarView(
-                      children: [
-                        SettingsTab(),
-                        FavoriteTab(),
-                      ],
-                    ),
+    return SizedBox(
+      width: MediaQuery.sizeOf(context).width / 1.1,
+      child: Drawer(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 48),
+          child: Column(
+            children: [
+              8.height,
+              CustomCard(),
+              24.height,
+              Expanded(
+                child: DefaultTabController(
+                  length: 2,
+                  child: Column(
+                    children: [
+                      const CustomTabBar(),
+                      Expanded(
+                        child: TabBarView(
+                          children: [
+                            SettingsTab(),
+                            FavoriteTab(),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
