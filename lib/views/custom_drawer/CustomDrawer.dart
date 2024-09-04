@@ -14,7 +14,7 @@ class CustomDrawer extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 10.0),
+            padding: const EdgeInsets.all(15.0),
             child: CustomCard(),
           ),
           10.height,

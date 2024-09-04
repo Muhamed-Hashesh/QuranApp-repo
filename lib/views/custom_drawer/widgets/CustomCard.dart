@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
       decoration: BoxDecoration(
-        color: Color(0xFF2B2B2B), // Dark background color
+        color: const Color(0xFF2B2B2B),
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
@@ -20,12 +21,11 @@ class CustomCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            icon: Icon(
-              Icons.arrow_back,
+            icon: const Icon(
+              Iconsax.arrow_right_3,
               color: Colors.white,
             ),
             onPressed: () {
-              // Action for back button
               Navigator.of(context).pop();
             },
           ),
@@ -35,7 +35,7 @@ class CustomCard extends StatelessWidget {
               Container(
                 width: 50,
                 height: 50,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     image: AssetImage(
@@ -44,8 +44,8 @@ class CustomCard extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 8), // Space between logo and text
-              Text(
+              const SizedBox(width: 8), // Space between logo and text
+              const Text(
                 'القرآن الكريم',
                 style: TextStyle(
                   color: Colors.white,
