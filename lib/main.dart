@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran/themes/theme.dart';
 import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
-import 'package:quran/views/on_boarding/onBoarding.dart';
+import 'package:quran/views/on_boarding/on_boarding.dart';
 
 void main() {
   runApp(const MyApp());

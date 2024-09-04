@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran/views/every_types_screen/widgets/daily_column_widget.dart';
-import 'package:quran/views/every_types_screen/widgets/prayer_time_card%20.dart';
+import 'package:quran/views/every_types_screen/widgets/prayer_time_card.dart';
 import 'package:quran/views/every_types_screen/widgets/tab_bar_widget.dart';
 import 'package:quran/widgets/custom_appbar.dart';
 import '../../custom_drawer/pages/custom_drawer.dart';
@@ -23,7 +23,7 @@ class EveryTypesView extends StatelessWidget {
                 imageUrl: 'assets/images/open_book.jpg',
               ),
               DailyColumnWidget(
-                arabicText: 'الحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+                arabicText: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
                 englishText:
                     'All praise and thanks be to the Lord of the worlds.',
                 surahName: "الفاتحة",
