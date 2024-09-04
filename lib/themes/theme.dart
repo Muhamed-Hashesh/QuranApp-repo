@@ -16,7 +16,7 @@ ThemeData lightTheme = ThemeData(
     surface: LightColors.instance.kBackgroundColor,
     onSurface: LightColors.instance.kBlackColor,
   ),
-  textTheme: GoogleFonts.poppinsTextTheme(
+  textTheme: GoogleFonts.almaraiTextTheme(
     ThemeData.light().textTheme,
   ).copyWith(
     /// onBoarding only
