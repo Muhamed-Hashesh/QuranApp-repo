@@ -19,7 +19,7 @@ class AudioPlayerContainer extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            radius: 30,
+            radius: 25,
             backgroundColor: Theme.of(context).colorScheme.onPrimary,
             child: Icon(IconsaxPlusBold.arrow_right_3,
                 color: Theme.of(context).colorScheme.onSecondaryContainer),
@@ -47,14 +47,16 @@ class AudioPlayerContainer extends StatelessWidget {
                         onChanged: (value) {},
                       ),
                     ),
-                    Text('١٢ : ٨',
-                        style:
-                            Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .onSurface
-                                      .withOpacity(0.5),
-                                )),
+                    Text(
+                      '١٢ : ٨',
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withOpacity(0.5),
+                              ),
+                    ),
                   ],
                 ),
               ],
