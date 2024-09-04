@@ -19,21 +19,21 @@ class ThreeTabsContainer extends StatelessWidget {
         widget: Container(
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primary,
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(13),
           ),
           child: TabBar(
             controller: _tabController,
             indicatorSize: TabBarIndicatorSize.tab,
             dividerHeight: 0,
             indicatorPadding:
-                const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
             indicator: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(10),
               color: Theme.of(context).colorScheme.onPrimary,
             ),
             unselectedLabelColor:
                 Theme.of(context).colorScheme.onSecondaryContainer,
-            labelPadding: const EdgeInsets.all(2),
+            labelPadding: const EdgeInsets.all(0),
             tabs: [
               for (var i = 0; i < tabs.length; i++)
                 Tab(
