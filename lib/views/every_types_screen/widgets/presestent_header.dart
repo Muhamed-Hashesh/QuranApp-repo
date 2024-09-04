@@ -9,7 +9,7 @@ class PersistentHeader extends SliverPersistentHeaderDelegate {
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
       width: double.infinity,
-      // height: 56.0,
+      color: Theme.of(context).colorScheme.surface,
       child: Center(child: widget),
     );
   }
