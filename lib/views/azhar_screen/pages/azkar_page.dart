@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:quran/helpers/inner_pages_app_bar.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/views/azhar_screen/widgets/azkar_page_content.dart';
+import 'package:quran/views/custom_drawer/CustomDrawer.dart';
+import 'package:quran/widgets/CustomAppBar.dart';
 
 class AzkarPage extends StatelessWidget {
   const AzkarPage({super.key});
-
-  static final GlobalKey<ScaffoldState> _scaffoldKey =
-      GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        key: _scaffoldKey,
-        appBar:
-            inPagesAppBar(context, scaffoldKey: _scaffoldKey, title: 'الأذكار'),
-        drawer: const Drawer(),
+        appBar: const Customappbar(title: 'الأذكار'),
+        drawer: CustomDrawer(),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: ListView.separated(
