@@ -41,6 +41,7 @@ class _EveryTypesViewState extends State<EveryTypesView>
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: CustomScrollView(
+            physics: ClampingScrollPhysics(),
             slivers: [
               const SliverToBoxAdapter(
                 child: PrayerTimeCard(
