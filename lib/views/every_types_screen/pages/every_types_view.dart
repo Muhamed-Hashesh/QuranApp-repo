@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:quran/widgets/CustomAppBar.dart';
-import 'package:quran/widgets/EveryTypesWidgets/DailyColumnWidget.dart';
-import '../widgets/EveryTypesWidgets/PrayerTimeCard .dart';
-import '../widgets/EveryTypesWidgets/TabBarWidget.dart';
-import 'custom_drawer/CustomDrawer.dart';
+import 'package:quran/views/every_types_screen/widgets/daily_column_widget.dart';
+import 'package:quran/views/every_types_screen/widgets/prayer_time_card%20.dart';
+import 'package:quran/views/every_types_screen/widgets/tab_bar_widget.dart';
+import 'package:quran/widgets/custom_appbar.dart';
+import '../../custom_drawer/pages/custom_drawer.dart';
 
-class Everytypesview extends StatelessWidget {
-  const Everytypesview({super.key});
+class EveryTypesView extends StatelessWidget {
+  const EveryTypesView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class Everytypesview extends StatelessWidget {
                 numAyah: 1,
               ),
               SizedBox(height: 10),
-              QuranAppTabBarGrid()
+              QuranAppTabBarGrid(),
             ],
           ),
         ),

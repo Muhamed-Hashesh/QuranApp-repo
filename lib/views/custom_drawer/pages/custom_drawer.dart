@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
-
-import 'widgets/CustomCard.dart';
-import 'widgets/CustomTabBar.dart';
-import 'widgets/FavoriteTab.dart';
-import 'widgets/SettingsTab.dart';
+import 'package:quran/views/custom_drawer/widgets/CustomCard.dart';
+import 'package:quran/views/custom_drawer/widgets/CustomTabBar.dart';
+import 'package:quran/views/custom_drawer/widgets/FavoriteTab.dart';
+import 'package:quran/views/custom_drawer/widgets/SettingsTab.dart';
 
 class CustomDrawer extends StatelessWidget {
+  CustomDrawer({super.key});
   final tabs = [' الإعدادات', 'المفضلة'];
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
