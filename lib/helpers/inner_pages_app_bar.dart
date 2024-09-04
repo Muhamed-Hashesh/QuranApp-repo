@@ -10,6 +10,7 @@ AppBar InPagesAppBar(
   bool centerTitle = true,
 }) {
   return AppBar(
+    forceMaterialTransparency: true,
     centerTitle: centerTitle,
     title: Text(
       title,
