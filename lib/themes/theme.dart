@@ -15,6 +15,7 @@ ThemeData lightTheme = ThemeData(
     onPrimaryContainer: LightColors.instance.kPrimaryColor,
     surface: LightColors.instance.kBackgroundColor,
     onSurface: LightColors.instance.kBlackColor,
+    onSecondaryContainer: LightColors.instance.kWhiteColor,
   ),
   textTheme: GoogleFonts.almaraiTextTheme(
     ThemeData.light().textTheme,

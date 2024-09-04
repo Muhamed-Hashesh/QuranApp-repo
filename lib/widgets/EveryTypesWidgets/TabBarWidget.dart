@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
-
 import 'GridViewItems.dart';
 
 class QuranAppTabBarGrid extends StatefulWidget {
   const QuranAppTabBarGrid({super.key});
 
   @override
-  _QuranAppTabBarGridState createState() => _QuranAppTabBarGridState();
+  QuranAppTabBarGridState createState() => QuranAppTabBarGridState();
 }
 
-class _QuranAppTabBarGridState extends State<QuranAppTabBarGrid>
+class QuranAppTabBarGridState extends State<QuranAppTabBarGrid>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final List<String> tabs = ['جميع التصنيفات', 'كل الوسائط', 'أوقات الصلاة'];

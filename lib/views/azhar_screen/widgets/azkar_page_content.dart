@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran/views/azhar_screen/widgets/animated_drop.dart';
+import 'package:quran/views/azhar_screen/widgets/reach_text_reqaa.dart';
+import 'package:quran/widgets/paje_container.dart';
 
 class AzkarPageContent extends StatefulWidget {
   const AzkarPageContent({super.key});
@@ -51,7 +53,12 @@ class _AzkarPageContentState extends State<AzkarPageContent>
             ),
           ),
         ),
-        AnimatedDrop(isPressed: isPressed),
+        AnimatedDrop(
+          isPressed: isPressed,
+          builderChild: const Column(
+            children: [PajeContainer(), ReachTextReqaa()],
+          ),
+        ),
       ],
     );
   }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
-AppBar InPagesAppBar(
+AppBar inPagesAppBar(
   BuildContext context, {
   required GlobalKey<ScaffoldState> scaffoldKey,
   required String title,
