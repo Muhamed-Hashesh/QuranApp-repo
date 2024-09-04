@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightTheme,
-      home: const OnBoarding(),
+      // home: const OnBoarding(),
       // home: const AlAd3yaScreen(),
-      // home: AzkarPage(),
+      home: AzkarPage(),
     );
   }
 }
