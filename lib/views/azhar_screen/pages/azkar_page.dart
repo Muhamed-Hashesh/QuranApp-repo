@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/views/azhar_screen/widgets/azkar_page_content.dart';
-import 'package:quran/views/custom_drawer/CustomDrawer.dart';
-import 'package:quran/widgets/CustomAppBar.dart';
+import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
+import 'package:quran/widgets/custom_appbar.dart';
 
 class AzkarPage extends StatelessWidget {
   const AzkarPage({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
-import 'GridViewItems.dart';
+import 'grid_view_items.dart';
 
 class QuranAppTabBarGrid extends StatefulWidget {
   const QuranAppTabBarGrid({super.key});

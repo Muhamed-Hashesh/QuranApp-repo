@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/views/audios_screen/widgets/audio_page_content.dart';
-import 'package:quran/views/custom_drawer/CustomDrawer.dart';
-import 'package:quran/widgets/CustomAppBar.dart';
+import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
+import 'package:quran/widgets/custom_appbar.dart';
 
 class AudiosPage extends StatelessWidget {
   const AudiosPage({super.key});
@@ -12,7 +12,7 @@ class AudiosPage extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: Customappbar(title: 'الصوتيات'),
+        appBar: const Customappbar(title: 'الصوتيات'),
         drawer: CustomDrawer(),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),

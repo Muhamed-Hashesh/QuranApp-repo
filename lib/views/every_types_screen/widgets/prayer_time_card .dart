@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Time_NextPray.dart';
+import 'time_next_pray.dart';
 
 class PrayerTimeCard extends StatelessWidget {
   const PrayerTimeCard({super.key, required this.imageUrl});

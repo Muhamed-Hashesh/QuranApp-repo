@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'DailyVerseCard .dart';
+import 'daily_verse_card .dart';
 
 class DailyColumnWidget extends StatelessWidget {
   const DailyColumnWidget(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'CotentCardAyaToday.dart';
+import 'content_card_aya_today.dart';
 
 class DailyVerseCard extends StatelessWidget {
   final String arabicText;
