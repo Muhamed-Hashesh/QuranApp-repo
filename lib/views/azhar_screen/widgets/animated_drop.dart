@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
+import 'package:quran/views/azhar_screen/widgets/reach_text_reqaa.dart';
 import 'package:quran/widgets/paje_container.dart';
 
 class AnimatedDrop extends StatelessWidget {
   const AnimatedDrop({
     super.key,
     required this.isPressed,
+    required this.builderChild,
   });
+  final Widget builderChild;
 
   final bool isPressed;
 
@@ -24,7 +27,7 @@ class AnimatedDrop extends StatelessWidget {
                 ListView.separated(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) => const PajeContainer(),
+                  itemBuilder: (context, index) => builderChild,
                   separatorBuilder: (context, index) => 20.height,
                   itemCount: 3,
                 ),

@@ -20,7 +20,7 @@ class _AlAd3yaScreenState extends State<AlAd3yaScreen> {
       child: Scaffold(
         key: _scaffoldKey,
         appBar:
-            InPagesAppBar(context, scaffoldKey: _scaffoldKey, title: 'الأدعية'),
+            inPagesAppBar(context, scaffoldKey: _scaffoldKey, title: 'الأدعية'),
         drawer: const Drawer(),
         body: Column(
           mainAxisSize: MainAxisSize.min,

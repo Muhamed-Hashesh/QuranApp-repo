@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/themes/colors.dart';
-
 import '../widgets/CustomOutlinedButton.dart';
 
 class OnBoarding extends StatelessWidget {
