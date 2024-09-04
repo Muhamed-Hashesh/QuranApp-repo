@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran/views/every_types_screen/pages/tabs/all_media_tap_content.dart';
 import 'package:quran/views/every_types_screen/pages/tabs/grid_view_items.dart';
+import 'package:quran/views/every_types_screen/pages/tabs/praying_time_tap_content.dart';
 
 class TapPageContent extends StatelessWidget {
   const TapPageContent({
@@ -18,11 +19,7 @@ class TapPageContent extends StatelessWidget {
         children: [
           Gridviewitems(),
           const AllMediaTapContent(),
-          Container(
-            width: 200,
-            height: 100,
-            color: Colors.blue,
-          ),
+          const PrayingTimeTapContent()
         ],
       ),
     );

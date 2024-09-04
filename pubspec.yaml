@@ -64,8 +64,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/icons/
     - assets/icons/Hicon/Outline/
     - assets/icons/vuesax/outline/
+    - assets/icons/vuesax/bulk/
   fonts:
     - family: AlNile
       fonts:

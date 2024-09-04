@@ -37,7 +37,7 @@ class AllMediaTapContent extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) => Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.only(bottom: 6),
         decoration: BoxDecoration(
           color: allMediaList[index]['color'],
