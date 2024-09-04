@@ -3,18 +3,19 @@ import 'package:quran/widgets/CustomAppBar.dart';
 import 'package:quran/widgets/EveryTypesWidgets/DailyColumnWidget.dart';
 import '../widgets/EveryTypesWidgets/PrayerTimeCard .dart';
 import '../widgets/EveryTypesWidgets/TabBarWidget.dart';
+import 'custom_drawer/CustomDrawer.dart';
 
 class Everytypesview extends StatelessWidget {
   const Everytypesview({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Directionality(
+    return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-          appBar: Customappbar(),
-          drawer: Drawer(),
-          body: SingleChildScrollView(
+          appBar: const Customappbar(),
+          drawer: CustomDrawer(),
+          body: const SingleChildScrollView(
             child: Column(
               children: [
                 PrayerTimeCard(
