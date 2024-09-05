@@ -30,7 +30,7 @@ class CustomDrawer extends StatelessWidget {
                       Expanded(
                         child: TabBarView(
                           children: [
-                            SettingsTab(),
+                            const SettingsTab(),
                             FavoriteTab(),
                           ],
                         ),

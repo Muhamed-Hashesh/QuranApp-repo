@@ -70,9 +70,7 @@ class PrayingTimeTapContent extends StatelessWidget {
         Column(
           children: List.generate(
             5,
-            (index) => AzanCard(
-              index: index,
-            ),
+            (index) => AzanCard(index: index),
           ),
         )
       ],
