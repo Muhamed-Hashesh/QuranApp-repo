@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:quran/views/custom_drawer/widgets/settings_item.dart';
 
-class SettingsTab extends StatefulWidget {
-  @override
-  State<SettingsTab> createState() => _SettingsTabState();
-}
-
-class _SettingsTabState extends State<SettingsTab> {
-  bool isNightModeEnabled = false;
-
+class SettingsTab extends StatelessWidget {
   static List<Map<String, dynamic>> settingsList = [
     {
       'icon': Image.asset(
@@ -66,37 +60,15 @@ class _SettingsTabState extends State<SettingsTab> {
     },
   ];
 
+  const SettingsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: const EdgeInsets.only(top: 8),
       physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (BuildContext context, int index) => ListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(
-            settingsList[index]['label'],
-            maxLines: 1,
-            softWrap: false,
-            style: GoogleFonts.rubik(
-              textStyle: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.8),
-              ),
-            ),
-          ),
-          trailing: settingsList[index]['hasSwitch']
-              ? Switch(
-                  value: isNightModeEnabled,
-                  onChanged: (value) {
-                    setState(() {
-                      isNightModeEnabled = value;
-                    });
-                  },
-                  activeColor: Theme.of(context).colorScheme.primary,
-                )
-              : null,
-          leading: settingsList[index]['icon']),
+      itemBuilder: (BuildContext context, int index) =>
+          SettingsItem(index: index, settingsList: settingsList),
       itemCount: settingsList.length,
     );
   }

@@ -21,54 +21,46 @@ class FavoriteTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.only(top: 2),
       itemCount: verses.length,
       itemBuilder: (context, index) {
-        return Card(
-          color: Color(0xffF0E6D2),
-          elevation: 4,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primaryContainer,
+            borderRadius: BorderRadius.circular(16),
           ),
           margin: const EdgeInsets.symmetric(vertical: 8),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  // Use Expanded to allow text to wrap properly
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        verses[index]['arabic']!,
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontFamily: 'AlNile',
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                        textAlign: TextAlign.right,
-                        softWrap: true,
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        verses[index]['translation']!,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          color: Color(0xffCC9B76),
-                        ),
-                      ),
-                    ],
-                  ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      verses[index]['arabic']!,
+                      style: Theme.of(context).textTheme.displayMedium,
+                      textAlign: TextAlign.right,
+                      softWrap: true,
+                    ),
+                    // const SizedBox(height: 8),
+                    Text(
+                      verses[index]['translation']!,
+                      style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                            color: Theme.of(context).colorScheme.onPrimary,
+                          ),
+                    ),
+                  ],
                 ),
-                IconButton(
-                  icon: Icon(Iconsax.heart_remove,
-                      color: Theme.of(context).colorScheme.primary),
-                  onPressed: () {},
-                ),
-              ],
-            ),
+              ),
+              IconButton(
+                icon: Icon(Iconsax.heart_remove,
+                    color: Theme.of(context).colorScheme.primary),
+                onPressed: () {},
+              ),
+            ],
           ),
         );
       },
