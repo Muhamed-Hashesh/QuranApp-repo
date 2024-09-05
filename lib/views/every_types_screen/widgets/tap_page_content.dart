@@ -16,10 +16,10 @@ class TapPageContent extends StatelessWidget {
     return SliverFillRemaining(
       child: TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           Gridviewitems(),
-          const AllMediaTapContent(),
-          const PrayingTimeTapContent()
+          AllMediaTapContent(),
+          PrayingTimeTapContent()
         ],
       ),
     );

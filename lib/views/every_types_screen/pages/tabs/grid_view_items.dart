@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
 
 class Gridviewitems extends StatelessWidget {
-  Gridviewitems({super.key});
-  final List<Map<String, String>> gridItems = [
+  const Gridviewitems({super.key});
+  static final List<Map<String, String>> gridItems = [
     {'icon': '🕋', 'label': 'أسماء الله'},
     {'icon': '📿', 'label': 'التسبيح'},
     {'icon': '🤲', 'label': 'الدعاء'},
@@ -14,7 +14,7 @@ class Gridviewitems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),

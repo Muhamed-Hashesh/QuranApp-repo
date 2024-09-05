@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:quran/views/every_types_screen/widgets/daily_column_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:quran/helpers/sized_box.dart';
+import 'package:quran/themes/colors.dart';
 import 'package:quran/views/every_types_screen/widgets/prayer_time_card.dart';
 import 'package:quran/views/every_types_screen/widgets/tap_page_content.dart';
 import 'package:quran/views/every_types_screen/widgets/three_tabs_container.dart';
+import 'package:quran/views/every_types_screen/widgets/today_verse_card_audio.dart';
+import 'package:quran/views/every_types_screen/widgets/todey_verse_card_slidable.dart';
 import 'package:quran/widgets/custom_appbar.dart';
 import '../../custom_drawer/pages/custom_drawer.dart';
 
@@ -38,34 +43,22 @@ class _EveryTypesViewState extends State<EveryTypesView>
         appBar: const Customappbar(
             title: 'القرآن الكريم', centerTitle: false, searchBar: true),
         drawer: CustomDrawer(),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: CustomScrollView(
-            physics: ClampingScrollPhysics(),
-            slivers: [
-              const SliverToBoxAdapter(
-                child: PrayerTimeCard(
-                  imageUrl: 'assets/images/open_book.jpg',
-                ),
-              ),
-              const SliverToBoxAdapter(
-                child: DailyColumnWidget(
-                  arabicText: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
-                  englishText:
-                      'All praise and thanks be to the Lord of the worlds.',
-                  surahName: "الفاتحة",
-                  numJaz: 1,
-                  numAyah: 1,
-                ),
-              ),
-              SliverPadding(
-                sliver: ThreeTabsContainer(
-                    tabController: _tabController, tabs: tabs),
-                padding: const EdgeInsets.symmetric(vertical: 16),
-              ),
-              TapPageContent(tabController: _tabController)
-            ],
-          ),
+        body: CustomScrollView(
+          physics: const ClampingScrollPhysics(),
+          slivers: [
+            const SliverToBoxAdapter(
+              child: PrayerTimeCard(),
+            ),
+            const SliverToBoxAdapter(
+              child: TodeyVerseCardSlidable(),
+            ),
+            SliverPadding(
+              sliver:
+                  ThreeTabsContainer(tabController: _tabController, tabs: tabs),
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+            ),
+            TapPageContent(tabController: _tabController)
+          ],
         ),
       ),
     );
