@@ -11,6 +11,7 @@ class PrayingTimeTapContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       // mainAxisSize: MainAxisSize.min,

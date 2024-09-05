@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'time_next_pray.dart';
 
 class PrayerTimeCard extends StatefulWidget {
-  const PrayerTimeCard({super.key, required this.imageUrl});
+  const PrayerTimeCard({super.key});
 
-  final String imageUrl;
+  // final String imageUrl;
 
   @override
   State<PrayerTimeCard> createState() => _PrayerTimeCardState();
@@ -38,9 +38,7 @@ class _PrayerTimeCardState extends State<PrayerTimeCard> {
   Widget build(BuildContext context) {
     return Container(
       height: 160,
-      margin: const EdgeInsets.symmetric(
-        vertical: 16,
-      ),
+      margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
