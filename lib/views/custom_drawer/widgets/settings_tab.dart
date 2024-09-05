@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsTab extends StatefulWidget {
@@ -34,7 +35,7 @@ class _SettingsTabState extends State<SettingsTab> {
       'hasSwitch': false,
     },
     const {
-      'icon': Icon(Iconsax.icon),
+      'icon': Icon(Iconsax.book),
       'label': 'السجدات',
       'hasSwitch': false,
     },
@@ -44,22 +45,22 @@ class _SettingsTabState extends State<SettingsTab> {
       'hasSwitch': false,
     },
     const {
-      'icon': Icon(Iconsax.icon),
+      'icon': Icon(Iconsax.home),
       'label': 'الصفحة الرئيسية',
       'hasSwitch': false,
     },
     const {
-      'icon': Icon(Iconsax.icon),
+      'icon': Icon(Iconsax.moon),
       'label': 'تفعيل الوضع الليلي',
       'hasSwitch': true,
     },
     const {
-      'icon': Icon(Iconsax.icon),
+      'icon': Icon(Iconsax.emoji_happy),
       'label': 'المزيد من التطبيقات',
       'hasSwitch': false,
     },
     const {
-      'icon': Icon(Iconsax.icon),
+      'icon': Icon(Iconsax.share),
       'label': 'مشاركة التطبيق',
       'hasSwitch': false,
     },
@@ -71,10 +72,18 @@ class _SettingsTabState extends State<SettingsTab> {
       padding: const EdgeInsets.only(top: 8),
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext context, int index) => ListTile(
+          contentPadding: EdgeInsets.zero,
           title: Text(
             settingsList[index]['label'],
             maxLines: 1,
             softWrap: false,
+            style: GoogleFonts.rubik(
+              textStyle: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.8),
+              ),
+            ),
           ),
           trailing: settingsList[index]['hasSwitch']
               ? Switch(
