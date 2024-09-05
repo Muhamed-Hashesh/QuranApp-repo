@@ -40,6 +40,7 @@ dependencies:
   iconsax_plus: ^1.0.0
   flutter_svg: ^2.0.10+1
   iconsax: ^0.0.8
+  just_audio: ^0.9.40
 
 dev_dependencies:
   flutter_test:

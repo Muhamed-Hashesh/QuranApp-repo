@@ -26,7 +26,7 @@ class CustomCard extends StatelessWidget {
                   .headlineMedium
                   ?.copyWith(color: Theme.of(context).colorScheme.secondary)),
           48.height,
-          Icon(
+          const Icon(
             Iconsax.arrow_left_2,
             color: Colors.white,
           ),
