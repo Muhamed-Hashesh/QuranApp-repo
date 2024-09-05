@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quran/themes/theme.dart';
 import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
 import 'package:quran/views/on_boarding/on_boarding.dart';
+import 'package:quran/views/videos_screen/pages/videoListview_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       home: const OnBoarding(),
       // home: const AlAd3yaScreen(),
+      // home: VideolistviewScreen(),
     );
   }
 }
