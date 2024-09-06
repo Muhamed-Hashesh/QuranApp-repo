@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/themes/colors.dart';
 import 'package:quran/views/every_types_screen/widgets/prayer_time_card.dart';
 import 'package:quran/views/every_types_screen/widgets/tap_page_content.dart';
 import 'package:quran/views/every_types_screen/widgets/three_tabs_container.dart';
-import 'package:quran/views/every_types_screen/widgets/today_verse_card_audio.dart';
 import 'package:quran/views/every_types_screen/widgets/todey_verse_card_slidable.dart';
 import 'package:quran/widgets/custom_appbar.dart';
 import '../../custom_drawer/pages/custom_drawer.dart';

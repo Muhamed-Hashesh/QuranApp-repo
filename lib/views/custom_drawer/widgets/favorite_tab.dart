@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class FavoriteTab extends StatelessWidget {
-  final List<Map<String, String>> verses = [
+  static final List<Map<String, String>> verses = [
     {
       'arabic': 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
       'translation': 'سورة الفاتحة: 1',
@@ -17,6 +17,8 @@ class FavoriteTab extends StatelessWidget {
       'translation': 'سورة الفاتحة: 1',
     },
   ];
+
+  const FavoriteTab({super.key});
 
   @override
   Widget build(BuildContext context) {

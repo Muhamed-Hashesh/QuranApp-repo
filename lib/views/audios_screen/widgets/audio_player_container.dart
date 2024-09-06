@@ -7,10 +7,10 @@ class AudioPlayerContainer extends StatefulWidget {
   const AudioPlayerContainer({super.key});
 
   @override
-  _AudioPlayerContainerState createState() => _AudioPlayerContainerState();
+  AudioPlayerContainerState createState() => AudioPlayerContainerState();
 }
 
-class _AudioPlayerContainerState extends State<AudioPlayerContainer> {
+class AudioPlayerContainerState extends State<AudioPlayerContainer> {
   late AudioPlayer _audioPlayer;
   int _currentPosition = 0;
   int _duration = 1;
