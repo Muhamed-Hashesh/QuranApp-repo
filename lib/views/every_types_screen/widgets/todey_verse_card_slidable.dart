@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/every_types_screen/pages/every_types_view.dart';
 import 'package:quran/views/every_types_screen/widgets/today_verse_card_page_view_content.dart';
 
 class TodeyVerseCardSlidable extends StatefulWidget {

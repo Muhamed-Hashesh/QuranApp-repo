@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/azhar_screen/widgets/reach_text_reqaa.dart';
-import 'package:quran/widgets/paje_container.dart';
 
 class AnimatedDrop extends StatelessWidget {
   const AnimatedDrop({

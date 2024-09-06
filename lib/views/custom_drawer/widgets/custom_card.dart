@@ -3,6 +3,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:quran/helpers/sized_box.dart';
 
 class CustomCard extends StatelessWidget {
+  const CustomCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

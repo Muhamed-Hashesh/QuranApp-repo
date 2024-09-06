@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/views/audios_screen/widgets/audio_player_container.dart';
-import 'package:quran/views/azhar_screen/widgets/animated_drop.dart';
+import 'package:quran/views/azkar_screen/widgets/animated_drop.dart';
 
 class AudiosPageContent extends StatefulWidget {
   const AudiosPageContent({super.key});
