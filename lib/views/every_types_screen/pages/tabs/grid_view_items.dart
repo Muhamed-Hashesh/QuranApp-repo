@@ -4,12 +4,12 @@ import 'package:quran/helpers/sized_box.dart';
 class Gridviewitems extends StatelessWidget {
   const Gridviewitems({super.key});
   static final List<Map<String, String>> gridItems = [
-    {'icon': '🕋', 'label': 'أسماء الله'},
-    {'icon': '📿', 'label': 'التسبيح'},
-    {'icon': '🤲', 'label': 'الدعاء'},
-    {'icon': '📖', 'label': 'الأحاديث'},
-    {'icon': '🧎', 'label': 'الذكر'},
-    {'icon': '📜', 'label': 'القرآن'},
+    {'icon': 'assets/images/image 12.png', 'label': 'الأدعية'},
+    {'icon': 'assets/images/image 8.png', 'label': 'السبحة الالكترونية'},
+    {'icon': 'assets/images/image 17.png', 'label': 'أسماء الله الحسني'},
+    {'icon': 'assets/images/image 16.png', 'label': 'القرآن'},
+    {'icon': 'assets/images/image 7.png', 'label': 'الأذكار'},
+    {'icon': 'assets/images/image 10.png', 'label': 'الأحاديث'},
   ];
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class Gridviewitems extends StatelessWidget {
         itemCount: gridItems.length,
         itemBuilder: (context, index) {
           return Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(15),
@@ -34,17 +35,18 @@ class Gridviewitems extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  gridItems[index]['icon']!,
-                  style: const TextStyle(fontSize: 32),
-                ),
+                Image.asset(gridItems[index]['icon']!),
+                // Text(
+                //   gridItems[index]['icon']!,
+                //   style: const TextStyle(fontSize: 32),
+                // ),
                 8.height,
                 Text(
                   gridItems[index]['label']!,
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Theme.of(context).colorScheme.primary),
+                  style: Theme.of(context).textTheme.headlineSmall,
                   textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
