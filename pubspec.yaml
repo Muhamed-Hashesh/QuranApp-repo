@@ -42,6 +42,9 @@ dependencies:
   iconsax: ^0.0.8
   just_audio: ^0.9.40
   video_player: ^2.9.1
+  chewie: ^1.8.4
+  flick_video_player: ^0.9.0
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
