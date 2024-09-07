@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../pages/playVideo_screen.dart';
+
 class Card_Videos_Listview extends StatelessWidget {
   const Card_Videos_Listview({
     super.key,
@@ -14,7 +16,11 @@ class Card_Videos_Listview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return PlayVideoScreen();
+        }));
+      },
       child: Card(
         color: Theme.of(context).colorScheme.secondary,
         shape: RoundedRectangleBorder(
