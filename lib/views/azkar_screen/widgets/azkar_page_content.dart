@@ -53,11 +53,8 @@ class _AzkarPageContentState extends State<AzkarPageContent>
             ),
           ),
         ),
-        AnimatedDrop(
+        AzkarAnimatedDrop(
           isPressed: isPressed,
-          builderChild: const Column(
-            children: [PajeContainer(), ReachTextReqaa()],
-          ),
           // index: 10,
         ),
       ],

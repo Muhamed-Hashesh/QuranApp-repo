@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran/helpers/sized_box.dart';
+import 'package:quran/views/azkar_screen/widgets/reach_text_reqaa.dart';
 import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
+import 'package:quran/widgets/paje_container.dart';
 
-class AnimatedDrop extends StatelessWidget {
-  const AnimatedDrop({
+class AzkarAnimatedDrop extends StatelessWidget {
+  const AzkarAnimatedDrop({
     super.key,
     required this.isPressed,
-    required this.builderChild,
     // required this.index,
   });
-  final Widget builderChild;
 
   final bool isPressed;
   // final int index;
@@ -29,7 +29,9 @@ class AnimatedDrop extends StatelessWidget {
                 ListView.separated(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) => builderChild,
+                  itemBuilder: (context, index) => const Column(
+                    children: [PajeContainer(), ReachTextReqaa()],
+                  ),
                   separatorBuilder: (context, index) => 20.height,
                   itemCount: 3,
                 ),

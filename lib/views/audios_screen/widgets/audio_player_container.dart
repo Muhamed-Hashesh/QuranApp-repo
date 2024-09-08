@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:quran/helpers/sized_box.dart';
+import 'package:quran/views/every_types_screen/models/all_media_model.dart';
 
 class AudioPlayerContainer extends StatefulWidget {
-  const AudioPlayerContainer({super.key});
+  const AudioPlayerContainer({super.key, required this.attachments});
+
+  final Attachments attachments;
 
   @override
   AudioPlayerContainerState createState() => AudioPlayerContainerState();
@@ -24,7 +27,7 @@ class AudioPlayerContainerState extends State<AudioPlayerContainer> {
 
   Future<void> _initializePlayer() async {
     try {
-      await _audioPlayer.setUrl(
+      await _audioPlayer.setUrl(widget.attachments.mediaUrl ??
           'https://d1.islamhouse.com/data/ar/ih_sounds/chain_02/shar7-mosnd-manask-osaime/ar-01-shar7-mosnd-manask-osaime.mp3');
       _duration = _audioPlayer.duration?.inSeconds ?? 1;
 
@@ -87,7 +90,8 @@ class AudioPlayerContainerState extends State<AudioPlayerContainer> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  'مسند أبي بكر الصديق - رضي الله عنه',
+                  widget.attachments.description ??
+                      'مسند أبي بكر الصديق - رضي الله عنه',
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall

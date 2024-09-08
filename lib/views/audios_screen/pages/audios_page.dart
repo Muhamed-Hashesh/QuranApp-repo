@@ -33,6 +33,8 @@ class AudiosPage extends StatelessWidget {
                 return ListView.separated(
                   itemBuilder: (context, index) => AudiosPageContent(
                     data: dataList[index],
+                    dataIndex: index,
+                    count: dataList[index].attachments!.length,
                   ),
                   separatorBuilder: (context, index) => 16.height,
                   itemCount: dataList!.length,
