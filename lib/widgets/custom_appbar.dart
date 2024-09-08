@@ -31,7 +31,14 @@ class Customappbar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          onPressed: () {},
+          onPressed: () {
+            if (searchBar) {
+              print('search bar');
+              // Navigator.pop(context);
+            } else {
+              Navigator.pop(context);
+            }
+          },
           icon: searchBar
               ? const Icon(Iconsax.search_normal_1)
               : const Icon(IconsaxPlusLinear.arrow_left_1),

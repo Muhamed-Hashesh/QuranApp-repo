@@ -19,7 +19,7 @@ class VideolistviewScreen extends StatelessWidget {
           itemCount: 3,
           itemBuilder: (context, index) {
             return const Card_Videos_Listview(
-              imaeUrl: 'assets/images/quran_book.png',
+              imaeUrl: 'assets/images/alafasy.png',
               title: 'أصول التحليل الفني ل سوق الأسهم',
               subTitle:
                   'التحليل الفني و الأساسي من مواضيع "البرصة" التي يهتم بها المستثمرون في الأسواق المالية , لما لها من أهمية في تحديد أوقات الدخول و الخروج من السوق',
