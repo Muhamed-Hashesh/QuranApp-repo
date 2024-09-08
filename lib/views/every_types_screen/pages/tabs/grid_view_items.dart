@@ -4,12 +4,30 @@ import 'package:quran/helpers/sized_box.dart';
 class Gridviewitems extends StatelessWidget {
   const Gridviewitems({super.key});
   static final List<Map<String, String>> gridItems = [
-    {'icon': 'assets/images/image 12.png', 'label': 'الأدعية'},
-    {'icon': 'assets/images/image 8.png', 'label': 'السبحة الالكترونية'},
-    {'icon': 'assets/images/image 17.png', 'label': 'أسماء الله الحسني'},
-    {'icon': 'assets/images/image 16.png', 'label': 'القرآن'},
-    {'icon': 'assets/images/image 7.png', 'label': 'الأذكار'},
-    {'icon': 'assets/images/image 10.png', 'label': 'الأحاديث'},
+    {
+      'icon': 'assets/images/image 12.png',
+      'label': 'الأدعية',
+    },
+    {
+      'icon': 'assets/images/image 8.png',
+      'label': 'السبحة الالكترونية',
+    },
+    {
+      'icon': 'assets/images/image 17.png',
+      'label': 'أسماء الله الحسني',
+    },
+    {
+      'icon': 'assets/images/image 16.png',
+      'label': 'القرآن',
+    },
+    {
+      'icon': 'assets/images/image 7.png',
+      'label': 'الأذكار',
+    },
+    {
+      'icon': 'assets/images/image 10.png',
+      'label': 'الأحاديث',
+    },
   ];
   @override
   Widget build(BuildContext context) {
