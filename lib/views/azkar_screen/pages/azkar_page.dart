@@ -12,7 +12,7 @@ class AzkarPage extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: const Customappbar(title: 'الأذكار'),
+        appBar: const CustomAppBar(title: 'الأذكار'),
         drawer: CustomDrawer(),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),

@@ -18,7 +18,7 @@ class _AlAd3yaScreenState extends State<AlAd3yaScreen> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: const Customappbar(title: 'الأدعية'),
+        appBar: const CustomAppBar(title: 'الأدعية'),
         drawer: CustomDrawer(),
         body: Column(
           mainAxisSize: MainAxisSize.min,
