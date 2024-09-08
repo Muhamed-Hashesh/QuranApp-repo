@@ -6,7 +6,7 @@ import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
 import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran/views/every_types_screen/services/all_media_services.dart';
 import 'package:quran/views/on_boarding/on_boarding.dart';
-import 'package:quran/views/videos_screen/pages/videoListview_screen.dart';
+import 'package:quran/views/videos_screen/pages/video_listview_screen.dart';
 
 void main() {
   runApp(const MyApp());

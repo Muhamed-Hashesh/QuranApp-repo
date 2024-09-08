@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quran/helpers/sized_box.dart';
+import 'package:quran/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran/views/videos_screen/pages/play_video_screen.dart';
 
-import '../pages/playVideo_screen.dart';
-
-class Card_Videos_Listview extends StatelessWidget {
-  const Card_Videos_Listview({
+class CardVideosListView extends StatelessWidget {
+  const CardVideosListView({
     super.key,
-    required this.imaeUrl,
-    required this.title,
-    required this.subTitle,
+    required this.data,
+    // required this.preparedBy,
+    required this.attachments,
   });
-  final String imaeUrl;
-  final String title;
-  final String subTitle;
+
+  final Data data;
+  // final PreparedBy preparedBy;
+  final Attachments attachments;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return PlayVideoScreen();
-        }));
-      },
+      onTap: () => Get.to(PlayVideoScreen(
+        data: data,
+        // preparedBy: preparedBy,
+        attachments: attachments,
+      )),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+        margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: Theme.of(context).colorScheme.secondary,
@@ -33,8 +35,9 @@ class Card_Videos_Listview extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(12)),
-              child: Image.asset(
-                imaeUrl,
+              child: Image.network(
+                data.image ??
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQaH0iL3i2SDCvG3iUUbh6BrYFagdbZ1varZBiLzx34AzdukVCcI-cA4HgZXC7wuD7is&usqp=CAU',
                 fit: BoxFit.cover,
                 height: 176,
                 width: double.infinity,
@@ -45,7 +48,7 @@ class Card_Videos_Listview extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  data.title ?? '',
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium
@@ -55,7 +58,7 @@ class Card_Videos_Listview extends StatelessWidget {
                 ),
                 8.height,
                 Text(
-                  subTitle,
+                  data.description ?? '',
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         fontSize: 12,
                         color: Theme.of(context)
