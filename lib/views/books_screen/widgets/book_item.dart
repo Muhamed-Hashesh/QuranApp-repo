@@ -23,7 +23,10 @@ class BookItemContainer extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (filePath.isNotEmpty) {
-          Get.to(() => PdfViewer(filePath: filePath));
+          Get.to(() => PdfViewer(
+                filePath: filePath,
+                topic: data.title ?? 'no topic',
+              ));
         } else {
           print('File path is empty');
         }
@@ -58,6 +61,7 @@ class BookItemContainer extends StatelessWidget {
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ],
       ),
