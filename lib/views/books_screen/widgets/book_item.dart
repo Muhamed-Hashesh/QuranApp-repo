@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/views/books_screen/pages/pdf_viewer.dart';
+import 'package:quran/views/every_types_screen/models/all_media_model.dart';
 
 class BookItemContainer extends StatelessWidget {
   final String filePath;
@@ -10,7 +10,13 @@ class BookItemContainer extends StatelessWidget {
   const BookItemContainer({
     super.key,
     required this.filePath,
+    required this.data,
+    required this.preparedBy,
+    required this.attachments,
   });
+  final Data data;
+  final PreparedBy preparedBy;
+  final Attachments attachments;
 
   @override
   Widget build(BuildContext context) {
@@ -37,18 +43,18 @@ class BookItemContainer extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               image: const DecorationImage(
                 image: AssetImage('assets/images/drawer_header.png'),
-                fit: BoxFit.scaleDown,
+                fit: BoxFit.fitHeight,
               ),
             ),
           ),
-          const Text(
-            'التسبيح في الكتاب والسنة',
+          Text(
+            data.title.toString(),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
           ),
-          const Text(
-            'كتاب ماتع يتحدث عن التسبيح في الكتاب والسنة والرد على المفاهيم الخاطئة فيه.',
+          Text(
+            '${data.description}',
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
@@ -84,28 +90,28 @@ class BookItemContainer extends StatelessWidget {
                 ),
                 16.height,
                 Text(
-                  'التسبيح في الكتاب والسنة',
+                  data.title.toString(),
                   style: Theme.of(context).textTheme.titleMedium,
                   textAlign: TextAlign.center,
                 ),
                 16.height,
                 Text(
-                  'كتاب ماتع يتحدث عن التسبيح في الكتاب والسنة والرد على المفاهيم الخاطئة فيه.',
+                  data.description.toString(),
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 16.height,
                 Text(
-                  'محمد إسحاق كندو',
+                  preparedBy.title ?? '',
                   style: Theme.of(context).textTheme.titleSmall,
                 ),
                 8.height,
                 Text(
-                  'خريج قسم العقيدة بالجامعة الإسلامية بالمدينة النبوية، رئيس مجلس علماء أهل السنة في بوركينا فاسو، وأبرز الدعاة في الوقت الحاضر في بوركينا فاسو.',
+                  preparedBy.description ?? '',
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 24.height,
-                const Text(
-                  '18.94 MB',
+                Text(
+                  attachments.size ?? '',
                   style: TextStyle(fontSize: 14),
                 ),
               ],

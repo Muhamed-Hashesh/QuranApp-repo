@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:quran/constants/constants.dart';
 import 'package:quran/views/audios_screen/pages/audios_page.dart';
 import 'package:quran/views/books_screen/pages/books_page.dart';
+import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran/views/videos_screen/pages/videoListview_screen.dart';
 
 class AllMediaTapContent extends StatelessWidget {
@@ -14,35 +16,30 @@ class AllMediaTapContent extends StatelessWidget {
       'title': 'المقالات',
       'subTitle': 'قم بتصفح المقالات الدينية من هنا',
       'color': Color(0xff284E46),
-      'router': BooksPage(),
     },
     {
       'path': AppConstants.audiosPath,
       'title': 'الصوتيات',
       'subTitle': 'استمع الي المساند والمحاضرات الصوتية من هنا',
       'color': Color(0xff323232),
-      'router': AudiosPage(),
     },
     {
       'path': AppConstants.videosPath,
       'title': 'الفيديوهات',
       'subTitle': 'عرض الفيديوهات الدينية من هنا',
       'color': Color(0xff783E3E),
-      'router': VideolistviewScreen(),
     },
     {
       'path': AppConstants.booksPath,
       'title': 'الكتب',
       'subTitle': 'قم بتصفح الكتب الدينية  وكتب السنه',
       'color': Color(0xff625137),
-      'router': BooksPage(),
     },
     {
       'path': AppConstants.khotabPath,
       'title': 'الخطب',
       'subTitle': 'شاهد الخطب الدينية كلها من هنا',
       'color': Color(0xff463E78),
-      'router': VideolistviewScreen(),
     },
   ];
 
@@ -72,7 +69,25 @@ class AllMediaCardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(allMediaList[index]['router']),
+      onTap: () {
+        (allMediaList[index]['path'] == AppConstants.booksPath ||
+                allMediaList[index]['path'] == AppConstants.articlesPath)
+            ? Get.to(
+                BooksPage(
+                  title: allMediaList[index]['title'],
+                ),
+              )
+            : (allMediaList[index]['path'] == AppConstants.audiosPath)
+                ? Get.to(AudiosPage())
+                : Get.to(
+                    VideolistviewScreen(
+                      title: allMediaList[index]['title'],
+                    ),
+                  );
+        context
+            .read<AllMediaCubit>()
+            .getData(media: allMediaList[index]['path']);
+      },
       child: Container(
         padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.only(bottom: 6),

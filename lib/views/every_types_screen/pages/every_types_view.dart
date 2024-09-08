@@ -35,7 +35,7 @@ class _EveryTypesViewState extends State<EveryTypesView>
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: const Customappbar(
+        appBar: const CustomAppBar(
             title: 'القرآن الكريم', centerTitle: false, searchBar: true),
         drawer: CustomDrawer(),
         body: CustomScrollView(

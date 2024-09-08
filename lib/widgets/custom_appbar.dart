@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
-class Customappbar extends StatelessWidget implements PreferredSizeWidget {
-  const Customappbar(
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar(
       {super.key,
       required this.title,
       this.searchBar = false,

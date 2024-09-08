@@ -3,9 +3,18 @@ import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran/helpers/sized_box.dart';
 import 'package:quran/views/audios_screen/widgets/audio_player_container.dart';
 import 'package:quran/views/azkar_screen/widgets/animated_drop.dart';
+import 'package:quran/views/every_types_screen/models/all_media_model.dart';
 
 class AudiosPageContent extends StatefulWidget {
-  const AudiosPageContent({super.key});
+  const AudiosPageContent({
+    super.key,
+    required this.data,
+    // required this.index,
+  });
+
+  // final AllMediaModel allMediaModel;
+  final Data data;
+  // final int index;
 
   @override
   State<AudiosPageContent> createState() => _AudiosPageContentState();
@@ -46,7 +55,7 @@ class _AudiosPageContentState extends State<AudiosPageContent>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'شرح مسند المناسك',
+                        widget.data.title ?? 'no title here',
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium
@@ -56,7 +65,7 @@ class _AudiosPageContentState extends State<AudiosPageContent>
                       ),
                       6.height,
                       Text(
-                        'سلسلة محاضرات صوتية، وفيها شرح الشيخ صالح العصيمي - أثابه الله - لكتابه مسند المناسك، وهو جزء فيه أصول أحاديث الحج.',
+                        widget.data.description ?? 'no Description here',
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium
@@ -87,7 +96,8 @@ class _AudiosPageContentState extends State<AudiosPageContent>
         ),
         AnimatedDrop(
           isPressed: isPressed,
-          builderChild: const AudioPlayerContainer(),
+          builderChild: AudioPlayerContainer(),
+          // index: widget.index,
         ),
       ],
     );

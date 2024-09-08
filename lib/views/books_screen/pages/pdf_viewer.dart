@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:dio/dio.dart';
+import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
 import 'package:quran/widgets/custom_appbar.dart';
 
 class PdfViewer extends StatefulWidget {
@@ -84,7 +85,8 @@ class PdfViewerState extends State<PdfViewer> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: const Customappbar(title: 'التسبيح من الكتاب والسنة'),
+        appBar: const CustomAppBar(title: 'التسبيح من الكتاب والسنة'),
+        drawer: CustomDrawer(),
         body: _isLoading
             ? Center(
                 child: Column(

@@ -19,7 +19,7 @@ class PlayVideoScreen extends GetView<VideopageController> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: const Customappbar(title: 'الفيديوهات'),
+        appBar: const CustomAppBar(title: 'الفيديوهات'),
         drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: Column(

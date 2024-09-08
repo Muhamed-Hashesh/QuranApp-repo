@@ -1,11 +1,19 @@
-// part of 'all_media_cubit.dart';
+import 'package:quran/views/every_types_screen/models/all_media_model.dart';
 
 abstract class AllMediaState {}
 
-final class AllMediaInitial extends AllMediaState {}
+class AllMediaInitial extends AllMediaState {}
 
-final class AllMediaDataLoaded extends AllMediaState {}
+class AllMediaLoading extends AllMediaState {}
 
-final class AllMediaLoading extends AllMediaState {}
+class AllMediaDataLoaded extends AllMediaState {
+  final AllMediaModel allMediaModel;
 
-final class AllMediaDataError extends AllMediaState {}
+  AllMediaDataLoaded({required this.allMediaModel});
+}
+
+class AllMediaDataError extends AllMediaState {
+  final String? error;
+
+  AllMediaDataError({this.error});
+}
