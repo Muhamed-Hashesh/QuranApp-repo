@@ -25,12 +25,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: centerTitle,
       title: notTitle
           ? widget // Use the provided widget directly
-          : widget != null
-              ? widget // Fallback to widget if available
-              : Text(
-                  title ?? '', // Provide a default value if title is null
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+          : widget ??
+              Text(
+                title ?? '', // Provide a default value if title is null
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
       leading: IconButton(
         onPressed: () => Scaffold.of(context).openDrawer(),
         icon: Icon(

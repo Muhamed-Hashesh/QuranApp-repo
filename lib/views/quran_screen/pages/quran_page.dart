@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quran/quran.dart' as quran;
 import 'package:quran_project/helpers/sized_box.dart';
 import 'package:quran_project/helpers/to_arabic.dart';
@@ -68,15 +69,9 @@ class SurahListScreen extends StatelessWidget {
                     .labelSmall
                     ?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        SurahDetailScreen(surahNumber: surahNumber),
-                  ),
-                );
-              },
+              onTap: () => Get.to(
+                () => SurahDetailScreen(surahNumber: surahNumber),
+              ),
             );
           },
           separatorBuilder: (BuildContext context, int index) => 16.height,
