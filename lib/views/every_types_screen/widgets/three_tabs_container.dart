@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran/views/every_types_screen/widgets/presestent_header.dart';
+import 'package:quran_project/views/every_types_screen/widgets/presestent_header.dart';
 
 class ThreeTabsContainer extends StatelessWidget {
   const ThreeTabsContainer({

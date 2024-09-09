@@ -1,4 +1,4 @@
-name: quran
+name: quran_project
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -48,6 +48,7 @@ dependencies:
   dio: ^5.7.0
   flutter_bloc: ^8.1.6
   flutter_pdfview: ^1.3.2
+  quran: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -83,6 +84,11 @@ flutter:
           weight: 400 # Regular weight
         - asset: assets/fonts/Al Nile.ttc
           weight: 700 # Bold weight
+
+    - family: UthmanicHafs
+      fonts:
+        - asset: assets/fonts/UthmanicHafs1 Ver13.ttf
+          weight: 400 # Regular weight
 
   # To add assets to your application, add an assets section, like this:
   # assets:

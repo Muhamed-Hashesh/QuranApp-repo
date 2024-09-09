@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran/helpers/sized_box.dart';
+import 'package:quran_project/helpers/sized_box.dart';
 
 class Gridviewitems extends StatelessWidget {
   const Gridviewitems({super.key});

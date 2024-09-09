@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/widgets/paje_container.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/widgets/paje_container.dart';
 
 class Ad3yaPagesContent extends StatelessWidget {
   const Ad3yaPagesContent({

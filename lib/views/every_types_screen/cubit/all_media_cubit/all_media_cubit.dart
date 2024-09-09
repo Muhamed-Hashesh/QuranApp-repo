@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran/views/every_types_screen/models/all_media_model.dart';
-import 'package:quran/views/every_types_screen/services/all_media_services.dart';
+import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran_project/views/every_types_screen/services/all_media_services.dart';
 
 import 'all_media_state.dart';
 

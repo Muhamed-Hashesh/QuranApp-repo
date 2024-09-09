@@ -1,4 +1,4 @@
-import 'package:quran/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
 
 abstract class AllMediaState {}
 

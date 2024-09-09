@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran/helpers/texts_helpers.dart';
+import 'package:quran_project/helpers/texts_helpers.dart';
 
 class ReachTextReqaa extends StatelessWidget {
   const ReachTextReqaa({
