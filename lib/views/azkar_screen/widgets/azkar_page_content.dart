@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran/views/azkar_screen/widgets/animated_drop.dart';
-import 'package:quran/views/azkar_screen/widgets/reach_text_reqaa.dart';
-import 'package:quran/widgets/paje_container.dart';
 
 class AzkarPageContent extends StatefulWidget {
   const AzkarPageContent({super.key});
@@ -14,8 +11,10 @@ class AzkarPageContent extends StatefulWidget {
 class _AzkarPageContentState extends State<AzkarPageContent>
     with AutomaticKeepAliveClientMixin {
   bool isPressed = false;
+
   @override
   Widget build(BuildContext context) {
+    super.build(context); // Call super to maintain the state
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,7 +44,7 @@ class _AzkarPageContentState extends State<AzkarPageContent>
                   turns: isPressed ? 0.25 : 0.0,
                   duration: const Duration(milliseconds: 300),
                   child: Icon(
-                    IconsaxPlusBold.arrow_down,
+                    Icons.arrow_drop_down,
                     color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
@@ -53,10 +52,7 @@ class _AzkarPageContentState extends State<AzkarPageContent>
             ),
           ),
         ),
-        AzkarAnimatedDrop(
-          isPressed: isPressed,
-          // index: 10,
-        ),
+        AzkarAnimatedDrop(isPressed: isPressed),
       ],
     );
   }

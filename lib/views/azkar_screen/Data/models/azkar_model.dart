@@ -1,11 +1,19 @@
 class AzkarModel {
-  late int iD;
-  late String aRABICTEXT;
-  late int rEPEAT;
+  final int id;
+  final String aRABICTEXT;
+  final int repeat;
 
-  AzkarModel.fromJson(Map<String, dynamic> json) {
-    iD = json['ID'];
-    aRABICTEXT = json['ARABIC_TEXT'];
-    rEPEAT = json['REPEAT'];
+  AzkarModel({
+    required this.id,
+    required this.aRABICTEXT,
+    required this.repeat,
+  });
+
+  factory AzkarModel.fromJson(Map<String, dynamic> json) {
+    return AzkarModel(
+      id: json['ID'] ?? 0,
+      aRABICTEXT: json['ARABIC_TEXT'] ?? '',
+      repeat: json['REPEAT'] ?? 1,
+    );
   }
 }

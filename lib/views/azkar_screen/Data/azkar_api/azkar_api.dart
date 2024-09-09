@@ -15,6 +15,7 @@ class AzkarApi {
       return response.data['أذكار الصباح والمساء'];
     } on DioException catch (e) {
       log(e.toString());
+      log("A7a");
       return [];
     }
   }

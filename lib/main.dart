@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:quran/themes/theme.dart';
 import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
+import 'package:quran/views/azkar_screen/pages/azkar_page.dart';
 import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran/views/every_types_screen/services/all_media_services.dart';
 import 'package:quran/views/on_boarding/on_boarding.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: lightTheme,
-        home: const OnBoarding(),
+        home: const AzkarPage(),
+        // home: const OnBoarding(),
         // home: const AlAd3yaScreen(),
         // home: const VideolistviewScreen(),
       ),
