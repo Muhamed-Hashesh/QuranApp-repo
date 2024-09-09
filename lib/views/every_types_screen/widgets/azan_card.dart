@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quran/helpers/sized_box.dart';
+import 'package:quran_project/helpers/sized_box.dart';
 
 class AzanCard extends StatelessWidget {
   const AzanCard({

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/themes/colors.dart';
-import 'package:quran/views/every_types_screen/widgets/today_verse_card_audio.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/themes/colors.dart';
+import 'package:quran_project/views/every_types_screen/widgets/today_verse_card_audio.dart';
 
 class TodayVerseCardPageViewContent extends StatelessWidget {
   const TodayVerseCardPageViewContent({

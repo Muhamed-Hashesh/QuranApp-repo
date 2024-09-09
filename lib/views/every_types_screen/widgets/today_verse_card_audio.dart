@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/themes/colors.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/themes/colors.dart';
 
 class TodayVerseCardAudio extends StatefulWidget {
   const TodayVerseCardAudio({super.key});

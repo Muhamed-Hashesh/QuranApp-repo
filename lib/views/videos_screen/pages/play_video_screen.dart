@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quran/helpers/Video_getx.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
-import 'package:quran/views/every_types_screen/models/all_media_model.dart';
-import 'package:quran/widgets/custom_appbar.dart';
+import 'package:quran_project/helpers/Video_getx.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
+import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran_project/widgets/custom_appbar.dart';
 import '../widgets/video_play.dart';
 
 class PlayVideoScreen extends GetView<VideopageController> {

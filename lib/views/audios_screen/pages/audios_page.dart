@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/audios_screen/widgets/audio_page_content.dart';
-import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
-import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
-import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_state.dart';
-import 'package:quran/views/every_types_screen/models/all_media_model.dart';
-import 'package:quran/widgets/custom_appbar.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/audios_screen/widgets/audio_page_content.dart';
+import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
+import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
+import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_state.dart';
+import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran_project/widgets/custom_appbar.dart';
 
 class AudiosPage extends StatelessWidget {
   const AudiosPage({super.key});

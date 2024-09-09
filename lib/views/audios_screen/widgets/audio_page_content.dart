@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/audios_screen/widgets/audio_animated_drop.dart';
-import 'package:quran/views/audios_screen/widgets/audio_player_container.dart';
-import 'package:quran/views/azkar_screen/widgets/animated_drop.dart';
-import 'package:quran/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/audios_screen/widgets/audio_animated_drop.dart';
+import 'package:quran_project/views/audios_screen/widgets/audio_player_container.dart';
+import 'package:quran_project/views/azkar_screen/widgets/animated_drop.dart';
+import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
 
 class AudiosPageContent extends StatefulWidget {
   const AudiosPageContent({
