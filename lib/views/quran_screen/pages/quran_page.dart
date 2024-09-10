@@ -46,8 +46,10 @@ class SurahListScreen extends StatelessWidget {
                 ),
                 trailing: Text(
                   'الصفحة ${convertToArabicNumerals(quran.getPageNumber(surahNumber, 1).toString())}',
-                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                      color: Theme.of(context).colorScheme.onPrimary),
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelSmall
+                      ?.copyWith(color: Theme.of(context).colorScheme.primary),
                 ),
                 onTap: () => context
                     .read<ChangeSceneCubit>()
