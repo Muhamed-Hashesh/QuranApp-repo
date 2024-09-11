@@ -59,14 +59,13 @@ class _SurahDetailScreenState extends State<SurahDetailScreen> {
             builder: (context, state) {
               if (state is ChangeSceneChangedToList) {
                 return const SurahListScreen();
-              } else if (state is ChangeSceneChangedToQuranPage) {
+              } else {
                 return QuranSurahPageBuilder(
                   pages: pages,
                   versesByPage: versesByPage,
                   surahNumber: widget.surahNumber,
                 );
               }
-              return const Center(child: CircularProgressIndicator());
             },
           ),
         ),
