@@ -3,11 +3,9 @@ import 'package:quran_project/views/azkar_screen/Data/models/azkar_model.dart';
 
 class PajeContainer extends StatelessWidget {
   final AzkarModel? azkarModel;
+  final String text;
 
-  const PajeContainer({
-    super.key,
-    this.azkarModel,
-  });
+  const PajeContainer({super.key, this.azkarModel, this.text = 'No Text Here'});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class PajeContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Text(
-        azkarModel?.aRABICTEXT ?? 'No text available',
+        azkarModel?.aRABICTEXT ?? text,
         style: Theme.of(context).textTheme.displaySmall,
       ),
     );
