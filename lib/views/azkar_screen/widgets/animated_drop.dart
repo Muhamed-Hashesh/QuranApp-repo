@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/azkar_screen/cubit/cubit/azkar_cubit.dart';
 import 'package:quran_project/views/azkar_screen/widgets/reach_text_reqaa.dart';
 import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran_project/widgets/paje_container.dart';
