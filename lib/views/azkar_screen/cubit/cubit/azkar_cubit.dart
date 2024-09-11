@@ -8,13 +8,14 @@ part 'azkar_state.dart';
 
 class AzkarCubit extends Cubit<AzkarState> {
   final AzkarRepo azkarRepo;
+
   AzkarCubit(this.azkarRepo) : super(AzkarInitial());
 
-  Future<void> getAzkar() async {
+  Future<void> getAzkar(int id, String type) async {
     emit(AzkarLoading());
     try {
-      final azkar_model = await azkarRepo.getAzkar();
-      emit(AzkarLoaded(azkar_model));
+      final azkarModel = await azkarRepo.getAzkar(id, type);
+      emit(AzkarLoaded(azkarModel));
     } on DioException catch (e) {
       emit(AzkarError(e.toString()));
     }

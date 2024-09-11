@@ -20,8 +20,7 @@ class AzkarPage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: BlocProvider(
-            create: (context) =>
-                AzkarCubit(AzkarRepo(azkarApi: AzkarApi()))..getAzkar(),
+            create: (context) => AzkarCubit(AzkarRepo(azkarApi: AzkarApi())),
             child: const AzkarPageContent(),
           ),
         ),

@@ -8,14 +8,24 @@ class AzkarApi {
     dio = Dio();
   }
 
-  Future<List<dynamic>> getAzkar() async {
+  Future<List<dynamic>> getAzkar(
+      {required int id, required String type}) async {
     try {
       final response =
-          await dio.get('https://www.hisnmuslim.com/api/ar/27.json');
-      return response.data['أذكار الصباح والمساء'];
+          await dio.get('https://www.hisnmuslim.com/api/ar/$id.json');
+
+      // Check if the response has the expected key
+      if (response.data != null && response.data[type] != null) {
+        return response.data[type];
+      } else {
+        log('The expected key is missing in the response.');
+        return [];
+      }
     } on DioException catch (e) {
-      log(e.toString());
-      log("A7a");
+      log('DioException: ${e.toString()}');
+      return [];
+    } catch (e) {
+      log('An unexpected error occurred: ${e.toString()}');
       return [];
     }
   }
