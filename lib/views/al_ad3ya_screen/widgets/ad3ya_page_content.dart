@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/helpers/to_arabic.dart';
+import 'package:quran_project/views/al_ad3ya_screen/ad3ya_json.dart';
 import 'package:quran_project/widgets/paje_container.dart';
 
 class Ad3yaPagesContent extends StatelessWidget {
   const Ad3yaPagesContent({
     super.key,
+    required this.index,
   });
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +24,11 @@ class Ad3yaPagesContent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'أدعية الرحمة',
+                  ad3yaList[index]['title'],
                   style: Theme.of(context).textTheme.titleSmall,
                 ),
                 Text(
-                  '٣ أدعية',
+                  '${convertToArabicNumerals(ad3yaList[index]['content'].length.toString())} أدعية',
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ],

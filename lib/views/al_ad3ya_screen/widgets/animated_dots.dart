@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_project/views/al_ad3ya_screen/ad3ya_json.dart';
 
 class AnimatedDots extends StatelessWidget {
   const AnimatedDots({
@@ -15,7 +16,7 @@ class AnimatedDots extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(
-          20,
+          ad3yaList.length,
           (index) => AnimatedContainer(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
