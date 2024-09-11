@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: lightTheme,
         // home: const OnBoarding(),
-        home: const AzkarPage(),
-        // home: const AlAd3yaScreen(),
+        // home: const AzkarPage(),
+        home: const AlAd3yaScreen(),
         // home: const VideolistviewScreen(),
       ),
     );
