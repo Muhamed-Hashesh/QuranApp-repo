@@ -21,7 +21,8 @@ class AzkarPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: BlocProvider(
             create: (context) => AzkarCubit(AzkarRepo(azkarApi: AzkarApi())),
-            child: const AzkarPageContent(),
+            child: ListView.builder(
+                itemBuilder: (context, index) => const AzkarPageContent()),
           ),
         ),
       ),
