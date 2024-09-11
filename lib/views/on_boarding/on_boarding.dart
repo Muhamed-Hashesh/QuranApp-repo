@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quran_project/helpers/sized_box.dart';
 import 'package:quran_project/themes/colors.dart';
 import 'widgets/custom_outlined_button.dart';
+import 'package:get/get.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});

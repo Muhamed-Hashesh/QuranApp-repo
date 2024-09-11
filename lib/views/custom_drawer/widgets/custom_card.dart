@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/quran_screen/pages/surah_details_screen.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key});
