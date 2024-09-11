@@ -9,10 +9,11 @@ import 'package:quran_project/views/on_boarding/on_boarding.dart';
 import 'package:quran_project/views/quran_screen/cubit/change_scene_cubit.dart';
 import 'package:quran_project/views/videos_screen/pages/video_listview_screen.dart';
 
+
 void main() {
   runApp(const MyApp());
   // AllMediaServices().getAllMedia(media: 'audios');
-  AllMediaCubit().getData(media: 'audios');
+  // AllMediaCubit().getData(media: 'audios');
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: lightTheme,
-        home: const OnBoarding(),
+        // home: const OnBoarding(),
+        home: const AzkarPage(),
         // home: const AlAd3yaScreen(),
         // home: const VideolistviewScreen(),
       ),

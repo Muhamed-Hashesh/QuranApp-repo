@@ -5,39 +5,64 @@ import 'package:quran_project/views/azkar_screen/widgets/reach_text_reqaa.dart';
 import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran_project/widgets/paje_container.dart';
 
-class AzkarAnimatedDrop extends StatelessWidget {
-  const AzkarAnimatedDrop({
-    super.key,
-    required this.isPressed,
-    // required this.index,
-  });
+class AzkarAnimatedDrop extends StatefulWidget {
+  final int typeId;
 
-  final bool isPressed;
-  // final int index;
+  const AzkarAnimatedDrop({super.key, required this.typeId});
+
+  @override
+  _AzkarAnimatedDropState createState() => _AzkarAnimatedDropState();
+}
+
+class _AzkarAnimatedDropState extends State<AzkarAnimatedDrop> {
+  late List<int> repeatCounts;
+
+  @override
+  void initState() {
+    super.initState();
+    repeatCounts = [];
+  }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSize(
-      alignment: Alignment.center,
-      duration: const Duration(milliseconds: 600),
-      curve: Curves.easeInOut,
-      reverseDuration: const Duration(milliseconds: 600),
-      child: isPressed
-          ? Column(
+    return BlocBuilder<AzkarCubit, AzkarState>(
+      builder: (context, state) {
+        if (state is AzkarLoading) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (state is AzkarLoaded) {
+          final azkarList = state.azkar;
+          if (repeatCounts.length != azkarList.length) {
+            repeatCounts = List.filled(azkarList.length, 0);
+          }
+          return ListView.separated(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) => Column(
               children: [
-                8.height,
-                ListView.separated(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) => const Column(
-                    children: [PajeContainer(), ReachTextReqaa()],
-                  ),
-                  separatorBuilder: (context, index) => 20.height,
-                  itemCount: 3,
+                GestureDetector(
+                  onTap: () {
+                    if (repeatCounts[index] < azkarList[index].repeat) {
+                      setState(() {
+                        repeatCounts[index]++;
+                      });
+                    }
+                  },
+                  child: PajeContainer(azkarModel: azkarList[index]),
+                ),
+                ReachTextReqaa(
+                  azkarModel: azkarList[index],
+                  repeatCount: repeatCounts[index],
                 ),
               ],
-            )
-          : const SizedBox(),
+            ),
+            separatorBuilder: (context, index) => const SizedBox(height: 20),
+            itemCount: azkarList.length,
+          );
+        } else if (state is AzkarError) {
+          return Center(child: Text('Error: ${state.message}'));
+        }
+        return const SizedBox();
+      },
     );
   }
 }
