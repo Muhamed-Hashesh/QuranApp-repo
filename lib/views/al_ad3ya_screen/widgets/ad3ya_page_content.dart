@@ -36,9 +36,9 @@ class Ad3yaPagesContent extends StatelessWidget {
           ),
           Expanded(
             child: ListView.separated(
-              itemCount: 3,
-              itemBuilder: (context, index) {
-                return PajeContainer();
+              itemCount: ad3yaList[index]['content'].length,
+              itemBuilder: (context, i) {
+                return PajeContainer(text: ad3yaList[index]['content'][i]);
               },
               separatorBuilder: (BuildContext context, int index) => 20.height,
             ),
