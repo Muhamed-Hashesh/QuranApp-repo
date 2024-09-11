@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quran_project/views/every_types_screen/pages/every_types_view.dart';
 
 class OutlinedButtonStart extends StatelessWidget {
@@ -12,12 +13,7 @@ class OutlinedButtonStart extends StatelessWidget {
       width: double.infinity,
       child: OutlinedButton(
         onPressed: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const EveryTypesView(),
-            ),
-          );
+          Get.to(() => const EveryTypesView());
         },
         style: OutlinedButton.styleFrom(
           side: BorderSide(

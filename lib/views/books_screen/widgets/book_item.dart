@@ -23,7 +23,7 @@ class BookItemContainer extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (filePath.isNotEmpty) {
-          Get.to(() => PdfViewer(
+          Get.to(() => () => PdfViewer(
                 filePath: filePath,
                 topic: data.title ?? 'no topic',
               ));

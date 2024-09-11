@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_project/helpers/texts_helpers.dart';
-import 'package:quran_project/views/azkar_screen/Data/models/azkar_model.dart';
+
 
 class ReachTextReqaa extends StatelessWidget {
   final AzkarModel azkarModel;

@@ -73,14 +73,14 @@ class AllMediaCardItem extends StatelessWidget {
         (allMediaList[index]['path'] == AppConstants.booksPath ||
                 allMediaList[index]['path'] == AppConstants.articlesPath)
             ? Get.to(
-                BooksPage(
+                () => BooksPage(
                   title: allMediaList[index]['title'],
                 ),
               )
             : (allMediaList[index]['path'] == AppConstants.audiosPath)
-                ? Get.to(AudiosPage())
+                ? Get.to(() => AudiosPage())
                 : Get.to(
-                    VideoListViewScreen(
+                    () => VideoListViewScreen(
                       title: allMediaList[index]['title'],
                     ),
                   );

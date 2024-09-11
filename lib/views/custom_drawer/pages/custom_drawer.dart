@@ -19,18 +19,18 @@ class CustomDrawer extends StatelessWidget {
           child: Column(
             children: [
               8.height,
-              CustomCard(),
+              const CustomCard(),
               24.height,
-              Expanded(
+              const Expanded(
                 child: DefaultTabController(
                   length: 2,
                   child: Column(
                     children: [
-                      const CustomTabBar(),
+                      CustomTabBar(),
                       Expanded(
                         child: TabBarView(
                           children: [
-                            const SettingsTab(),
+                            SettingsTab(),
                             FavoriteTab(),
                           ],
                         ),

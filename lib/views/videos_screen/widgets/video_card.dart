@@ -19,11 +19,11 @@ class CardVideosListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(PlayVideoScreen(
-        data: data,
-        // preparedBy: preparedBy,
-        attachments: attachments,
-      )),
+      onTap: () => Get.to(() => PlayVideoScreen(
+            data: data,
+            // preparedBy: preparedBy,
+            attachments: attachments,
+          )),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
