@@ -19,7 +19,7 @@ class CustomDrawer extends StatelessWidget {
           child: Column(
             children: [
               8.height,
-              const CustomCard(),
+              CustomCard(),
               24.height,
               const Expanded(
                 child: DefaultTabController(
