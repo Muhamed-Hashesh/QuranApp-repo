@@ -1,5 +1,5 @@
-import 'package:quran/views/azkar_screen/Data/azkar_api/azkar_api.dart';
-import 'package:quran/views/azkar_screen/Data/models/azkar_model.dart';
+import 'package:quran_project/views/azkar_screen/Data/azkar_api/azkar_api.dart';
+import 'package:quran_project/views/azkar_screen/Data/models/azkar_model.dart';
 
 class AzkarRepo {
   final AzkarApi azkarApi;

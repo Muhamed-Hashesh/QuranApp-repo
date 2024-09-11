@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:quran/helpers/sized_box.dart';
+import 'package:quran_project/helpers/sized_box.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key});

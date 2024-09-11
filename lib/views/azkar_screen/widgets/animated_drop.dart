@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran/views/azkar_screen/cubit/cubit/azkar_cubit.dart';
-import 'package:quran/views/azkar_screen/widgets/reach_text_reqaa.dart';
-import 'package:quran/widgets/paje_container.dart';
+import 'package:quran_project/views/azkar_screen/cubit/cubit/azkar_cubit.dart';
+import 'package:quran_project/views/azkar_screen/widgets/reach_text_reqaa.dart';
+import 'package:quran_project/widgets/paje_container.dart';
 
 class AzkarAnimatedDrop extends StatefulWidget {
   final int typeId;

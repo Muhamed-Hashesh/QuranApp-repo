@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran/views/azkar_screen/Data/azkar_api/azkar_api.dart';
-import 'package:quran/views/azkar_screen/Data/azkar_repo/azkar_repo.dart';
-import 'package:quran/views/azkar_screen/cubit/cubit/azkar_cubit.dart';
-import 'package:quran/views/azkar_screen/widgets/azkar_page_content.dart';
-import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
-import 'package:quran/widgets/custom_appbar.dart';
+import 'package:quran_project/views/azkar_screen/Data/azkar_api/azkar_api.dart';
+import 'package:quran_project/views/azkar_screen/Data/azkar_repo/azkar_repo.dart';
+import 'package:quran_project/views/azkar_screen/cubit/cubit/azkar_cubit.dart';
+import 'package:quran_project/views/azkar_screen/widgets/azkar_page_content.dart';
+import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
+import 'package:quran_project/widgets/custom_appbar.dart';
 
 class AzkarPage extends StatelessWidget {
   const AzkarPage({super.key});

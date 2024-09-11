@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/every_types_screen/widgets/azan_card.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/every_types_screen/widgets/azan_card.dart';
 
 class PrayingTimeTapContent extends StatelessWidget {
   const PrayingTimeTapContent({super.key});

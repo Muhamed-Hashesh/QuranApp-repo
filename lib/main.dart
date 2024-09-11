@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:quran/themes/theme.dart';
-import 'package:quran/views/al_ad3ya_screen/pages/ad3ya_page.dart';
-import 'package:quran/views/azkar_screen/pages/azkar_page.dart';
-import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
-import 'package:quran/views/every_types_screen/services/all_media_services.dart';
-import 'package:quran/views/on_boarding/on_boarding.dart';
-import 'package:quran/views/videos_screen/pages/video_listview_screen.dart';
+import 'package:quran_project/themes/theme.dart';
+import 'package:quran_project/views/al_ad3ya_screen/pages/ad3ya_page.dart';
+import 'package:quran_project/views/azkar_screen/pages/azkar_page.dart';
+import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
+import 'package:quran_project/views/every_types_screen/services/all_media_services.dart';
+import 'package:quran_project/views/on_boarding/on_boarding.dart';
+import 'package:quran_project/views/videos_screen/pages/video_listview_screen.dart';
 
 void main() {
   runApp(const MyApp());

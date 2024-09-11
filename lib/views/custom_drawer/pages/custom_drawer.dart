@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/custom_drawer/widgets/custom_card.dart';
-import 'package:quran/views/custom_drawer/widgets/custom_tab_bar.dart';
-import 'package:quran/views/custom_drawer/widgets/favorite_tab.dart';
-import 'package:quran/views/custom_drawer/widgets/settings_tab.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/custom_drawer/widgets/custom_card.dart';
+import 'package:quran_project/views/custom_drawer/widgets/custom_tab_bar.dart';
+import 'package:quran_project/views/custom_drawer/widgets/favorite_tab.dart';
+import 'package:quran_project/views/custom_drawer/widgets/settings_tab.dart';
 
 class CustomDrawer extends StatelessWidget {
   CustomDrawer({super.key});

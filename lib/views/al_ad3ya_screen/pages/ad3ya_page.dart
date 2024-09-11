@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quran/views/al_ad3ya_screen/widgets/ad3ya_page_content.dart';
-import 'package:quran/views/al_ad3ya_screen/widgets/animated_dots.dart';
-import 'package:quran/views/custom_drawer/pages/custom_drawer.dart';
-import 'package:quran/widgets/custom_appbar.dart';
+import 'package:quran_project/views/al_ad3ya_screen/widgets/ad3ya_page_content.dart';
+import 'package:quran_project/views/al_ad3ya_screen/widgets/animated_dots.dart';
+import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
+import 'package:quran_project/widgets/custom_appbar.dart';
 
 class AlAd3yaScreen extends StatefulWidget {
   const AlAd3yaScreen({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/audios_screen/widgets/audio_player_container.dart';
-import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
-import 'package:quran/views/every_types_screen/cubit/all_media_cubit/all_media_state.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/audios_screen/widgets/audio_player_container.dart';
+import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
+import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_state.dart';
 
 class AudiosAnimatedDrop extends StatelessWidget {
   const AudiosAnimatedDrop({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quran/helpers/sized_box.dart';
-import 'package:quran/views/every_types_screen/models/all_media_model.dart';
-import 'package:quran/views/videos_screen/pages/play_video_screen.dart';
+import 'package:quran_project/helpers/sized_box.dart';
+import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
+import 'package:quran_project/views/videos_screen/pages/play_video_screen.dart';
 
 class CardVideosListView extends StatelessWidget {
   const CardVideosListView({
