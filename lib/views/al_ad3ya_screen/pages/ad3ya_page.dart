@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_project/views/al_ad3ya_screen/ad3ya_json.dart';
 import 'package:quran_project/views/al_ad3ya_screen/widgets/ad3ya_page_content.dart';
 import 'package:quran_project/views/al_ad3ya_screen/widgets/animated_dots.dart';
 import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
@@ -31,8 +32,9 @@ class _AlAd3yaScreenState extends State<AlAd3yaScreen> {
                     pageIndex = index;
                   });
                 },
-                itemBuilder: (context, index) => const Ad3yaPagesContent(),
-                itemCount: 20,
+                itemBuilder: (context, index) =>
+                    Ad3yaPagesContent(index: index),
+                itemCount: ad3yaList.length,
               ),
             ),
             AnimatedDots(pageIndex: pageIndex),
