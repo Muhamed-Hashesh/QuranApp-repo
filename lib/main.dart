@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => AllMediaCubit()),
         BlocProvider(create: (context) => ChangeSceneCubit()),
-        BlocProvider(create: (context) => SebhaCubit()),
+        BlocProvider(create: (context) => TasbihCubit()),
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
