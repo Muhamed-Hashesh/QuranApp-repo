@@ -15,7 +15,7 @@ class ChangeSceneCubit extends Cubit<ChangeSceneState> {
   }
 
   void changeSceneToPage({required int surahNumber}) {
-    Get.offAll(() => SurahDetailScreen(surahNumber: surahNumber));
+    Get.to(() => SurahDetailScreen(surahNumber: surahNumber));
     emit(ChangeSceneChangedToQuranPage());
   }
 }

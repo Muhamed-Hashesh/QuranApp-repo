@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quran_project/themes/change_theme.dart';
+import 'package:quran_project/themes/colors.dart';
 
-class SettingsItem extends StatefulWidget {
-  const SettingsItem(
-      {super.key, required this.index, required this.settingsList});
+class SettingsItem extends StatelessWidget {
+  SettingsItem({super.key, required this.index, required this.settingsList});
 
   final int index;
   final List settingsList;
 
-  @override
-  State<SettingsItem> createState() => _SettingsItemState();
-}
-
-class _SettingsItemState extends State<SettingsItem> {
-  bool isNightModeEnabled = false;
+  final ChangeAppTheme changeAppThemeController = Get.put(ChangeAppTheme());
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
         contentPadding: EdgeInsets.zero,
         title: Text(
-          widget.settingsList[widget.index]['label'],
+          settingsList[index]['label'],
           maxLines: 1,
           softWrap: false,
           style: GoogleFonts.rubik(
@@ -31,17 +28,15 @@ class _SettingsItemState extends State<SettingsItem> {
             ),
           ),
         ),
-        trailing: widget.settingsList[widget.index]['hasSwitch']
-            ? Switch(
-                value: isNightModeEnabled,
-                onChanged: (value) {
-                  setState(() {
-                    isNightModeEnabled = value;
-                  });
-                },
-                activeColor: Theme.of(context).colorScheme.primary,
-              )
+        trailing: settingsList[index]['hasSwitch']
+            ? Obx(() => Switch(
+                  value: changeAppThemeController.isDarkMode.value,
+                  onChanged: (value) {
+                    changeAppThemeController.changeTheme(value);
+                  },
+                  activeColor: LightColors.instance.kPrimaryColor,
+                ))
             : null,
-        leading: widget.settingsList[widget.index]['icon']);
+        leading: settingsList[index]['icon']);
   }
 }
