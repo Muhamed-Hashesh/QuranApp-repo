@@ -39,6 +39,8 @@ class MyApp extends StatelessWidget {
         home: const AlAd3yaScreen(),
         // home: const VideolistviewScreen(),
         // home: const TasbihView(),
+        // home: ElectronicSebhaPage(),
+        // home: const AhadithPage(),
       ),
     );
   }
