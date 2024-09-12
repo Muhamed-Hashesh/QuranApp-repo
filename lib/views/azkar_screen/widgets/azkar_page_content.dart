@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran_project/views/azkar_screen/cubit/cubit/azkar_cubit.dart';
 import 'package:quran_project/views/azkar_screen/widgets/animated_drop.dart';
-import 'package:quran_project/views/azkar_screen/widgets/reach_text_reqaa.dart';
+import 'package:quran_project/widgets/reach_text_reqaa.dart';
 import 'package:quran_project/widgets/paje_container.dart';
 
 class AzkarPageContent extends StatefulWidget {

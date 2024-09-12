@@ -89,6 +89,10 @@ flutter:
       fonts:
         - asset: assets/fonts/UthmanicHafs1 Ver13.ttf
           weight: 400 # Regular weight
+    - family: Digital
+      fonts:
+        - asset: assets/fonts/digital-7.ttf
+          weight: 400 # Regular weight
 
   # To add assets to your application, add an assets section, like this:
   # assets:
