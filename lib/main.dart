@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => AllMediaCubit()),
         BlocProvider(create: (context) => ChangeSceneCubit()),
-        BlocProvider(create: (context) => SebhaCubit()),
+        BlocProvider(create: (context) => TasbihCubit()),
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         // home: const AzkarPage(),
         // home: const AlAd3yaScreen(),
         // home: const VideolistviewScreen(),
-        home: ElectronicSebhaPage(),
+        home: const TasbihView(),
       ),
     );
   }
