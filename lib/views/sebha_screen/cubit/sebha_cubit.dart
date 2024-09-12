@@ -45,13 +45,14 @@ part 'sebha_state.dart';
 // }
 
 //----------------------------------------------------------------
+
 class TasbihCubit extends Cubit<TasbihState> {
   TasbihCubit()
       : super(TasbihState(items: [
           TasbihItem(text: 'سبحان الله'),
           TasbihItem(text: 'الحمد لله'),
-          TasbihItem(text: 'لا إله إلا الله'),
           TasbihItem(text: 'الله أكبر'),
+          TasbihItem(text: 'لا إله إلا الله'),
         ]));
 
   void selectItem(int index) {
@@ -68,22 +69,25 @@ class TasbihCubit extends Cubit<TasbihState> {
       currentItems[selectedIndex] = currentItems[selectedIndex].copyWith(
         count: currentItems[selectedIndex].count + 1,
       );
-    } else if (selectedIndex < currentItems.length - 1) {
-      selectedIndex++;
+    } else {
+      // Find the next item that hasn't reached its limit
+      final nextIndex =
+          currentItems.indexWhere((item) => item.count < item.limit);
+      if (nextIndex != -1) {
+        selectedIndex = nextIndex;
+        currentItems[selectedIndex] = currentItems[selectedIndex].copyWith(
+          count: currentItems[selectedIndex].count + 1,
+        );
+      }
     }
 
     emit(state.copyWith(items: currentItems, selectedIndex: selectedIndex));
   }
 
-  void resetCount() {
-    final resetItems =
-        state.items.map((item) => item.copyWith(count: 0)).toList();
-    emit(state.copyWith(items: resetItems, selectedIndex: 0));
-  }
-
-  void addNewTasbih(String text, {int limit = 33}) {
-    final updatedItems = List<TasbihItem>.from(state.items)
-      ..add(TasbihItem(text: text, limit: limit));
-    emit(state.copyWith(items: updatedItems));
+  void resetSelectedCount() {
+    final currentItems = List<TasbihItem>.from(state.items);
+    currentItems[state.selectedIndex] =
+        currentItems[state.selectedIndex].copyWith(count: 0);
+    emit(state.copyWith(items: currentItems));
   }
 }

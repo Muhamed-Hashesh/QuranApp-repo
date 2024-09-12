@@ -36,9 +36,9 @@ class MyApp extends StatelessWidget {
         theme: lightTheme,
         // home: const OnBoarding(),
         // home: const AzkarPage(),
-        // home: const AlAd3yaScreen(),
+        home: const AlAd3yaScreen(),
         // home: const VideolistviewScreen(),
-        home: const TasbihView(),
+        // home: const TasbihView(),
       ),
     );
   }

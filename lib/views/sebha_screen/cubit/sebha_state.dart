@@ -23,7 +23,6 @@ final class TasbihInitial extends TasbihState {
 }
 */
 //-------------------------------------------------------------------------------
-
 class TasbihState {
   final List<TasbihItem> items;
   final int selectedIndex;
