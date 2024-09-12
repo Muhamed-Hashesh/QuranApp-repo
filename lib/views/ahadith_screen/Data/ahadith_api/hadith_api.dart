@@ -11,7 +11,7 @@ class HadithApi {
   Future<List<dynamic>> getAhadith({required String type}) async {
     try {
       final response = await dio
-          .get('https://hadis-api-id.vercel.app/hadith/$type?page=1&limit=50');
+          .get('https://hadis-api-id.vercel.app/hadith/$type?page=1&limit=10');
       if (response.data != null && response.data['items'] != null) {
         return response.data['items'];
       } else {
