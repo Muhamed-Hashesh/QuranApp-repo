@@ -19,34 +19,39 @@ class SettingsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        // onTap: () {
-        //   // final nav = settingsList[index]['nav'];
-        //
-        //   Get.back();
-        //   Get.to(() => settingsList[index]['nav']);
-        // },
-        contentPadding: EdgeInsets.zero,
-        title: Text(
-          settingsList[index]['label'],
-          maxLines: 1,
-          softWrap: false,
-          style: GoogleFonts.rubik(
-            textStyle: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.8),
-            ),
+      onTap: () {
+        // Navigate only if the item has a navigation target that is a widget
+        final navTarget = settingsList[index]['nav'];
+        if (navTarget is Widget) {
+          Get.to(() => navTarget);
+        } else {
+          // Handle any action for items that don't navigate
+          print('This item does not navigate.');
+        }
+      },
+      contentPadding: EdgeInsets.zero,
+      title: Text(
+        settingsList[index]['label'],
+        maxLines: 1,
+        softWrap: false,
+        style: GoogleFonts.rubik(
+          textStyle: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.8),
           ),
         ),
-        trailing: settingsList[index]['hasSwitch']
-            ? Obx(() => Switch(
-                  value: changeAppThemeController.isDarkMode.value,
-                  onChanged: (value) {
-                    changeAppThemeController.changeTheme(value);
-                  },
-                  activeColor: LightColors.instance.kPrimaryColor,
-                ))
-            : null,
-        leading: settingsList[index]['icon']);
+      ),
+      trailing: settingsList[index]['hasSwitch']
+          ? Obx(() => Switch(
+                value: changeAppThemeController.isDarkMode.value,
+                onChanged: (value) {
+                  changeAppThemeController.changeTheme(value);
+                },
+                activeColor: LightColors.instance.kPrimaryColor,
+              ))
+          : null,
+      leading: settingsList[index]['icon'],
+    );
   }
 }

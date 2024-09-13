@@ -21,17 +21,17 @@ class CustomDrawer extends StatelessWidget {
               8.height,
               CustomCard(),
               24.height,
-              Expanded(
+              const Expanded(
                 child: DefaultTabController(
                   length: 2,
                   child: Column(
                     children: [
-                      const CustomTabBar(),
+                      CustomTabBar(),
                       Expanded(
                         child: TabBarView(
                           children: [
                             SettingsTab(),
-                            const FavoriteTab(),
+                            FavoriteTab(),
                           ],
                         ),
                       ),
