@@ -5,7 +5,11 @@ import 'package:quran_project/themes/change_theme.dart';
 import 'package:quran_project/themes/colors.dart';
 
 class SettingsItem extends StatelessWidget {
-  SettingsItem({super.key, required this.index, required this.settingsList});
+  SettingsItem({
+    super.key,
+    required this.index,
+    required this.settingsList,
+  });
 
   final int index;
   final List settingsList;
@@ -15,6 +19,12 @@ class SettingsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+        // onTap: () {
+        //   // final nav = settingsList[index]['nav'];
+        //
+        //   Get.back();
+        //   Get.to(() => settingsList[index]['nav']);
+        // },
         contentPadding: EdgeInsets.zero,
         title: Text(
           settingsList[index]['label'],

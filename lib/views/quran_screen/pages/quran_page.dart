@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran/quran.dart' as quran;
 import 'package:quran_project/helpers/sized_box.dart';
 import 'package:quran_project/helpers/to_arabic.dart';
+import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
 import 'package:quran_project/views/quran_screen/cubit/change_scene_cubit.dart';
 import 'package:quran_project/views/quran_screen/helpers/app_bar_customization.dart';
 
@@ -14,6 +15,7 @@ class SurahListScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        drawer: CustomDrawer(),
         appBar: quranAppBarCustomization(context),
         body: ListView.separated(
           itemCount: quran.totalSurahCount,
