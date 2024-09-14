@@ -58,7 +58,7 @@ class BookItemContainer extends StatelessWidget {
           ),
           Text(
             '${data.description}',
-            maxLines: 3,
+            maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.headlineSmall,

@@ -50,25 +50,25 @@ class SettingsTab extends StatelessWidget {
       'icon': const Icon(Iconsax.home),
       'label': 'الصفحة الرئيسية',
       'hasSwitch': false,
-      'nav': const EveryTypesView(),
+      'nav': const EveryTypesView(), // Ensure it's a widget
     },
     {
       'icon': const Icon(Iconsax.moon),
       'label': 'تفعيل الوضع الليلي',
       'hasSwitch': true,
-      'nav': SizedBox(),
+      'nav': SizedBox(), // This will not navigate
     },
     {
       'icon': const Icon(Iconsax.emoji_happy),
       'label': 'المزيد من التطبيقات',
       'hasSwitch': false,
-      'nav': SizedBox(),
+      'nav': SizedBox(), // This will not navigate
     },
     {
       'icon': const Icon(Iconsax.share),
       'label': 'مشاركة التطبيق',
       'hasSwitch': false,
-      'nav': SizedBox(),
+      'nav': SizedBox(), // This will not navigate
     },
   ];
 
