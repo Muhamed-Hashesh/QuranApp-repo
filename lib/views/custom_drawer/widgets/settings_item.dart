@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quran_project/themes/change_theme.dart';
 import 'package:quran_project/themes/colors.dart';
+import 'package:quran_project/views/every_types_screen/pages/every_types_view.dart';
 
 class SettingsItem extends StatelessWidget {
   SettingsItem({
@@ -19,12 +20,12 @@ class SettingsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        // onTap: () {
-        //   // final nav = settingsList[index]['nav'];
-        //
-        //   Get.back();
-        //   Get.to(() => settingsList[index]['nav']);
-        // },
+        onTap: () {
+          if (settingsList[index]['label'] == 'الصفحة الرئيسية') {
+            Get.back();
+            Get.to(const EveryTypesView());
+          }
+        },
         contentPadding: EdgeInsets.zero,
         title: Text(
           settingsList[index]['label'],

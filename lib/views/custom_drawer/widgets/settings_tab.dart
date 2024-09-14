@@ -6,7 +6,7 @@ import 'package:quran_project/views/every_types_screen/pages/every_types_view.da
 import 'package:quran_project/views/quran_screen/pages/surah_details_screen.dart';
 
 class SettingsTab extends StatelessWidget {
-  static List<Map<String, dynamic>> settingsList = [
+  List<Map<String, dynamic>> settingsList = [
     {
       'icon': Image.asset(
         'assets/images/Quraan.png',
@@ -72,7 +72,7 @@ class SettingsTab extends StatelessWidget {
     },
   ];
 
-  const SettingsTab({super.key});
+  SettingsTab({super.key});
 
   @override
   Widget build(BuildContext context) {

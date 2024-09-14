@@ -106,7 +106,7 @@ class Content1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       textDirection: TextDirection.ltr,
-      'All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.All praise and thanks be to the Lord of the worlds.',
+      'All praise and thanks be to the Lord of the worlds.',
       style: GoogleFonts.poppins(
         textStyle: TextStyle(
           fontSize: 16,
