@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:quran_project/views/custom_drawer/widgets/settings_item.dart';
-import 'package:quran_project/views/every_types_screen/pages/every_types_view.dart';
-import 'package:quran_project/views/quran_screen/pages/surah_details_screen.dart';
 
 class SettingsTab extends StatelessWidget {
   List<Map<String, dynamic>> settingsList = [

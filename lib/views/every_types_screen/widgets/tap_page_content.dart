@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran_project/views/every_types_screen/pages/tabs/all_media_tap_content.dart';
 import 'package:quran_project/views/every_types_screen/pages/tabs/grid_view_items.dart';
 import 'package:quran_project/views/every_types_screen/pages/tabs/praying_time_tap_content.dart';

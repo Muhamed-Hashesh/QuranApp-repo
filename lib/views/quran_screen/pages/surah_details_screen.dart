@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:quran/quran.dart' as quran;
-import 'package:quran_project/helpers/sized_box.dart';
-import 'package:quran_project/helpers/to_arabic.dart';
 import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
 import 'package:quran_project/views/quran_screen/cubit/change_scene_cubit.dart';
 import 'package:quran_project/views/quran_screen/helpers/app_bar_customization.dart';
 import 'package:quran_project/views/quran_screen/pages/quran_page.dart';
 import 'package:quran_project/views/quran_screen/pages/quran_surah_page_builder.dart';
-import 'package:quran_project/widgets/custom_appbar.dart';
 
 class SurahDetailScreen extends StatefulWidget {
   final int surahNumber;

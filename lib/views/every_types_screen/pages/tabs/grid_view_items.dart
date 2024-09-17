@@ -4,7 +4,6 @@ import 'package:quran_project/helpers/sized_box.dart';
 import 'package:quran_project/views/ahadith_screen/presentation/views/ahadith_page.dart';
 import 'package:quran_project/views/al_ad3ya_screen/pages/ad3ya_page.dart';
 import 'package:quran_project/views/azkar_screen/pages/azkar_page.dart';
-import 'package:quran_project/views/quran_screen/pages/quran_surah_page_builder.dart';
 import 'package:quran_project/views/quran_screen/pages/surah_details_screen.dart';
 import 'package:quran_project/views/sebha_screen/pages/sebhs_page.dart';
 

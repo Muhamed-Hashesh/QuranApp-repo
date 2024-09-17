@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_cubit.dart';
 import 'package:quran_project/views/every_types_screen/cubit/all_media_cubit/all_media_state.dart';
-
 import '../../../widgets/custom_appbar.dart';
 import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
-
 import '../widgets/video_card.dart';
 
 class VideoListViewScreen extends StatelessWidget {

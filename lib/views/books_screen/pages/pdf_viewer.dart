@@ -3,7 +3,6 @@ import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:quran_project/views/custom_drawer/pages/custom_drawer.dart';
-import 'package:quran_project/views/every_types_screen/models/all_media_model.dart';
 import 'package:quran_project/widgets/custom_appbar.dart';
 
 class PdfViewer extends StatefulWidget {
